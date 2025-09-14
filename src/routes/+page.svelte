@@ -1,5 +1,129 @@
 <script lang="ts">
-	export const prerender = true;
+	import ObfuscatedEmailLink from "$lib/components/ObfuscatedEmailLink.svelte";
+	import ObfuscatedTelegramLink from "$lib/components/ObfuscatedTelegramLink.svelte";
+	import LinkedInIcon from "$lib/icons/LinkedInIcon.svelte";
+	import GithubIcon from "$lib/icons/GithubIcon.svelte";
+	import ProjectModal from "$lib/components/ProjectModal.svelte";
+
+	import { getModalStore } from "@skeletonlabs/skeleton";
+	const modalStore = getModalStore();
+
+	interface IProject {
+		title: string;
+		cover: string;
+		overview: string;
+		problem: string;
+		solution: string[];
+		impact: string;
+		techStack: string[];
+		link?: string;
+		nda?: boolean;
+		image?: string;
+	}
+
+	const projects: IProject[] = [
+		{
+			title: "EngagementFit – Corporate Wellness Platform",
+			cover:
+				"Corporate wellness platform rescue and rebuild, migrated to CodeIgniter 4 with new UI, dashboards, subscriptions, and reporting.",
+			overview:
+				"EngagementFit needed a stable, scalable corporate wellness platform after their offshore build failed.",
+			problem:
+				"The app was unstable, with monolithic 100k+ line files, no search, poor security, and an incomplete migration from CodeIgniter 3 to 4.",
+			solution: [
+				"Migrated and refactored into clean, modular components.",
+				"Redesigned UI with Bootstrap 5, DataTables, and Chart.js.",
+				"Added OTP login and AWS SES email notifications.",
+				"Built an admin dashboard with permissions, subscriptions, role assignments, event tracking, and PDF reporting.",
+			],
+			impact:
+				"The platform became secure, scalable, and business-ready, enabling EngagementFit to manage affiliates, companies, and employees effectively.",
+			techStack: ["CodeIgniter 4", "PHP", "MySQL", "Bootstrap 5", "Chart.js", "DataTables", "AWS SES"],
+			link: "https://engagementfit.com",
+			image: "/EngagementFit.jpeg",
+		},
+		{
+			title: "DANSA – Dive Insurance Membership Website",
+			cover:
+				"Membership platform for divers and families with automated Netcash payments, upgrades, and family coverage rules.",
+			overview:
+				"DANSA needed a modern insurance membership system to handle complex family and diving coverage scenarios.",
+			problem:
+				"Their old systems couldn’t manage recurring payments, membership upgrades, or diver/non-diver family rules.",
+			solution: [
+				"Angular frontend + Vendure backend with GraphQL APIs.",
+				"Integrated Netcash for debit orders and once-off payments.",
+				"Built flexible membership logic for divers, non-divers, and families.",
+				"Automated billing, renewals, and upgrades.",
+			],
+			impact:
+				"Thousands of active members now manage memberships seamlessly. Automated payments reduced admin work, while flexible logic improved customer satisfaction.",
+			techStack: ["Angular", "Vendure (NestJS)", "GraphQL", "Netcash API"],
+			link: "https://dansa.org",
+			image: "/Dansa.png",
+		},
+		{
+			title: "Exclusive Books – Shopify Integration & Automation",
+			cover:
+				"Shopify integration for 6M+ products, real-time sync with MySQL, GraphQL APIs, and automation for vouchers and pickup points.",
+			overview: "Exclusive Books needed a robust integration between their Shopify store and legacy MySQL systems.",
+			problem:
+				"REST APIs updated products one by one, hitting rate limits. Stock sync took weeks, leaving inventory outdated and unreliable.",
+			solution: [
+				"Migrated from REST to GraphQL APIs with bulk imports.",
+				"Implemented Google Pub/Sub and Maxwell Daemon for real-time sync.",
+				"Automated voucher creation, product imports, and pickup points across 40+ stores.",
+				"Stabilized the project after rescuing it from a failing previous developer.",
+			],
+			impact:
+				"Stock sync dropped from weeks to hours. Customers and staff gained accurate inventory visibility across millions of products.",
+			techStack: ["Shopify", "GraphQL", "Google Pub/Sub", "MySQL", "Maxwell Daemon", "Node.js"],
+			link: "https://exclusivebooks.co.za",
+			image: "/ExclusiveBooks.png",
+		},
+		{
+			title: "FinnPont – SEO Optimization",
+			cover:
+				"SEO audit and optimization to improve PageSpeed, metadata, and structured data for stronger search rankings.",
+			overview: "FinnPont wanted to strengthen digital visibility and speed up its website performance.",
+			problem: "The site suffered from slow load speeds, incomplete metadata, and weak technical SEO.",
+			solution: [
+				"PageSpeed optimization.",
+				"Structured data for rich search results.",
+				"Metadata fixes and keyword-targeted adjustments.",
+			],
+			impact:
+				"Even with partial rollout, the site gained faster performance, improved rankings, and better user engagement.",
+			techStack: ["Next.js", "SEO Tooling", "PageSpeed"],
+			link: "https://finnpont.com",
+			image: "/Finnpont.png",
+		},
+		{
+			title: "SmartBiii – Shopping & Collaboration Platform",
+			cover:
+				"Business training and shopper collaboration platform with React frontend and Django API, charts and PDF exports.",
+			overview: "SmartBiii provides a collaborative shopping and training experience with dashboards and reporting.",
+			problem: "Needed a scalable, modular platform with robust reporting and export features.",
+			solution: [
+				"Built Django API and React frontend (Nx monorepo).",
+				"Implemented session templates, team management, forecasting, and inventory calculations.",
+				"Added observer views, charting, and PDF exports.",
+			],
+			impact: "Delivered a scalable platform used in multiple training cohorts.",
+			techStack: ["Django", "React", "Nx Monorepo", "PostgreSQL", "Docker", "Chart.js"],
+			image: "/SmartBiii.png",
+			link: "https://smartbiii.com",
+		},
+	];
+
+	function openProject(project: IProject): void {
+		modalStore.trigger({
+			type: "component",
+			component: { ref: ProjectModal, props: { project } },
+			modalClasses: "max-w-3xl w-[min(92vw,48rem)] overflow-hidden rounded-xl bg-surface-100-800-token",
+			backdropClasses: "bg-black/40 backdrop-blur-sm",
+		});
+	}
 </script>
 
 <section class="container mx-auto p-6 pt-20 md:pt-10 md:p-10 space-y-10">
@@ -8,11 +132,28 @@
 		<p class="text-xl opacity-90">Full-Stack Developer & Founder of Malva Dev</p>
 		<p class="opacity-80">Blairgowrie, Gauteng, South Africa</p>
 		<p>
+			<ObfuscatedEmailLink buttonClass="btn btn-sm variant-filled" />
+			<ObfuscatedTelegramLink buttonClass="btn btn-sm variant-filled" />
 			<a
-				class="underline"
-				href="mailto:dru@malvadev.com">dru@malvadev.com</a
+				class="btn btn-sm variant-filled"
+				href="https://linkedin.com/in/dru-connold"
+				target="_blank"
+				rel="noreferrer"
+				aria-label="LinkedIn"
 			>
-			<span class="opacity-80"> | ID: DRUBRU01</span>
+				<LinkedInIcon className="w-4 h-4" />
+				<span class="sr-only">LinkedIn</span>
+			</a>
+			<a
+				class="btn btn-sm variant-filled"
+				href="https://github.com/flumpiey"
+				target="_blank"
+				rel="noreferrer"
+				aria-label="GitHub"
+			>
+				<GithubIcon className="w-4 h-4" />
+				<span class="sr-only">GitHub</span>
+			</a>
 		</p>
 	</header>
 
@@ -23,7 +164,7 @@
 		<h2>Profile Summary</h2>
 		<p>
 			Full-stack developer with over 10 years of experience delivering software solutions across web, mobile, and
-			e-commerce. Founder of <strong>Malva Dev</strong>, helping businesses transform ideas into scalable digital
+			e-commerce. Founder of <strong>MalvaDev</strong>, helping businesses transform ideas into scalable digital
 			platforms. Skilled in modern frontend and backend stacks, e-commerce integrations, project management, and DevOps.
 			Experienced in leading small teams, managing end-to-end delivery, and
 			<strong>rescuing unstable systems to production quality</strong>.
@@ -52,7 +193,7 @@
 	>
 		<h2>Professional Experience</h2>
 		<div>
-			<h3 class="m-0">Malva Dev – Business Owner</h3>
+			<h3 class="m-0">MalvaDev – Business Owner</h3>
 			<p class="mt-1 text-sm opacity-80">June 2023 – Present | Randburg, Gauteng, South Africa</p>
 			<ul>
 				<li>Delivering full-stack development services for international and South African clients.</li>
@@ -86,73 +227,57 @@
 		id="projects"
 		class="prose prose-invert max-w-none space-y-6"
 	>
-		<h2>Key Projects &amp; GitHub</h2>
-		<div>
-			<h3 class="m-0">EngagementFit – Corporate Wellness Platform</h3>
-			<p>
-				Rescued an unstable platform, migrating from CodeIgniter 3 to 4 and refactoring 100k+ line files into modular
-				code. Delivered modern UI (Bootstrap 5, Chart.js, DataTables), OTP logins, AWS SES integration, and a new admin
-				dashboard with subscriptions, permissions, and PDF reporting.<br /><em>Tech:</em> CodeIgniter 4, PHP, MySQL, Bootstrap
-				5, Chart.js, DataTables, AWS SES
-			</p>
+		<h2 class="prose prose-invert">Projects</h2>
+		<div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+			{#each projects as p (p.title)}
+				<div
+					class="card preset-filled-surface-100-900 border-[1px] border-surface-200-800 card-hover divide-surface-200-800 block max-w-md divide-y overflow-hidden p-0 rounded-none m-0"
+				>
+					<header>
+						{#if p.image}
+							<img
+								src={p.image}
+								alt={`${p.title} screenshot`}
+								class="block w-full aspect-[16/9] object-cover m-0"
+							/>
+						{:else}
+							<div class="aspect-[16/9] w-full bg-surface-200-700-token flex items-center justify-center">
+								<span class="text-xs opacity-70">Screenshot Placeholder</span>
+							</div>
+						{/if}
+					</header>
+					<article class="space-y-4 p-4">
+						<div class="p-4">
+							<h3 class="m-0 text-base font-semibold">{p.title}</h3>
+							<p class="mt-1 text-sm opacity-80">{p.cover}</p>
+							<div class="mt-3 grid grid-cols-2 gap-2">
+								<button
+									class="btn btn-sm variant-filled w-full"
+									on:click={() => openProject(p)}>View details</button
+								>
+								{#if p.link}
+									<a
+										class="btn btn-sm variant-ghost w-full"
+										href={p.link}
+										target="_blank"
+										rel="noreferrer">Visit site</a
+									>
+								{:else}
+									<button
+										class="btn btn-sm variant-ghost w-full opacity-60 cursor-not-allowed"
+										disabled
+									>
+										Under NDA
+									</button>
+								{/if}
+							</div>
+						</div>
+					</article>
+				</div>
+			{/each}
 		</div>
-		<div>
-			<h3 class="m-0">Exclusive Books – Shopify Integration &amp; Automation</h3>
-			<p>
-				Architected full integration between Shopify and MySQL for 6M+ products across 40+ stores. Migrated from REST to
-				GraphQL with bulk imports, implemented Google Pub/Sub and Maxwell Daemon for real-time sync, and automated
-				vouchers, product creation, and pickup points. Reduced sync times from weeks to hours.<br /><em>Tech:</em> Shopify,
-				GraphQL, Pub/Sub, MySQL, Maxwell Daemon, Node.js
-			</p>
-		</div>
-		<div>
-			<h3 class="m-0">SmartBiii – Training Simulation Platform</h3>
-			<p>
-				Built a Django API and React frontend with Nx monorepo for a business training simulation. Features included
-				session templates, team management, forecasting, inventory calculations, observer views, and PDF/chart exports.
-				Delivered a scalable platform used in multiple training cohorts.<br /><em>Tech:</em> Django, React, Nx Monorepo,
-				PostgreSQL, Docker, Chart.js
-			</p>
-		</div>
-		<div>
-			<h3 class="m-0">DANSA – Dive Insurance Membership Website</h3>
-			<p>
-				Developed a membership platform with Angular + Vendure. Integrated Netcash for debit order and pay-now payments,
-				added family membership logic, and built GraphQL APIs for billing and upgrades. Supports thousands of members
-				with automated insurance coverage.<br /><em>Tech:</em> Angular, Vendure (NestJS), GraphQL, Netcash API
-			</p>
-		</div>
-		<div>
-			<h3 class="m-0">FinnPont &amp; Finnegan Burger – SEO Optimization</h3>
-			<p>
-				Performed technical SEO audits and PageSpeed optimization. Improved structured data, metadata, and load
-				performance, delivering higher rankings and faster page loads.<br /><em>Tech:</em> Next.js, SEO Tooling, PageSpeed
-			</p>
-		</div>
-		<div>
-			<h3 class="m-0">LDV South Africa – Next.js E-commerce</h3>
-			<p>
-				Proposal and partial build of LDV’s official site using Next.js, Vendure, and Sanity. Designed for scalability,
-				with optional 3D car configurator.<br /><em>Tech:</em> Next.js, Vendure, Sanity CMS
-			</p>
-		</div>
-		<div>
-			<h3 class="m-0">Malva Dev Open Source Projects</h3>
-			<ul>
-				<li><strong>Sconaut:</strong> SEO audit tool (Go)</li>
-				<li><strong>MediaServer:</strong> Internal media handling system</li>
-				<li><strong>Vendure Extensions:</strong> Membership and payment plugins</li>
-				<li><strong>Focuscus:</strong> AI prompt/text generation experiments (Python)</li>
-			</ul>
-		</div>
-		<div>
-			<h3 class="m-0">Vendure Contributions</h3>
-			<p>
-				Forked and extended GraphQL-based e-commerce framework to support membership and payment workflows.<br /><em
-					>Tech:</em
-				> TypeScript, GraphQL, NestJS
-			</p>
-		</div>
+
+		<!-- Modal content handled by global component modal -->
 	</section>
 
 	<section

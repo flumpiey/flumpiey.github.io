@@ -1,6 +1,6 @@
 <script lang="ts">
 	import "../app.postcss";
-	import { AppBar, AppShell } from "@skeletonlabs/skeleton";
+	import { AppBar, AppShell, initializeStores, Modal } from "@skeletonlabs/skeleton";
 	// Highlight JS
 	import hljs from "highlight.js/lib/core";
 	import { slide } from "svelte/transition";
@@ -14,6 +14,10 @@
 	import javascript from "highlight.js/lib/languages/javascript";
 	import typescript from "highlight.js/lib/languages/typescript";
 	import xml from "highlight.js/lib/languages/xml"; // for HTML
+	import ProjectModal from "$lib/components/ProjectModal.svelte";
+
+	// Initialize Skeleton stores (modal, toast, etc.)
+	initializeStores();
 
 	hljs.registerLanguage("xml", xml); // for HTML
 	hljs.registerLanguage("css", css);
@@ -191,4 +195,7 @@
 	<div class="md:ml-64">
 		<slot />
 	</div>
+
+	<!-- Global Modal instance -->
+	<Modal components={{ projectModal: { ref: ProjectModal } }} />
 </AppShell>
