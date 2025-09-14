@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+html,
+body {
+	@apply min-h-screen overflow-auto;
+}
+
+/* Smooth anchor scrolling with offset handled via scroll-mt-* on sections */
+html {
+	@apply scroll-smooth;
+}
