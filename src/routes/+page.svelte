@@ -99,18 +99,29 @@
 			image: "/Finnpont.png",
 		},
 		{
-			title: "SmartBiii – Shopping & Collaboration Platform",
+			title: "SmartBiii – Social Shopping & Collaboration Platform",
 			cover:
-				"Business training and shopper collaboration platform with React frontend and Django API, charts and PDF exports.",
-			overview: "SmartBiii provides a collaborative shopping and training experience with dashboards and reporting.",
-			problem: "Needed a scalable, modular platform with robust reporting and export features.",
+				"Social media-inspired shopping platform that lets users crowdsource deals, share lists, and plan shopping collaboratively.",
+			overview:
+				"SmartBiii enables shoppers to discover and share the best deals through a visually engaging, Instagram-style feed. The platform also allows collaborative list creation and community-driven shopping planning.",
+			problem:
+				"Shoppers struggle to keep track of deals across multiple apps and stores, and needed a single, community-driven platform for sharing, organizing, and planning purchases.",
 			solution: [
-				"Built Django API and React frontend (Nx monorepo).",
-				"Implemented session templates, team management, forecasting, and inventory calculations.",
-				"Added observer views, charting, and PDF exports.",
+				"Developed Django API backend and React frontend (Nx monorepo) with real-time updates.",
+				"Implemented social feed for deal discovery, collaborative shopping lists, and deal submissions.",
+				"Integrated reporting dashboards, cloud hosting, and scalable data sync.",
 			],
-			impact: "Delivered a scalable platform used in multiple training cohorts.",
-			techStack: ["Django", "React", "Nx Monorepo", "PostgreSQL", "Docker", "Chart.js"],
+			impact:
+				"Delivered a modern, community-driven shopping platform that connects users, crowdsources deals, and simplifies shopping management.",
+			techStack: [
+				"Django",
+				"React",
+				"Nx Monorepo",
+				"PostgreSQL",
+				"Docker",
+				"AWS",
+				"RESTful API"
+			],
 			image: "/SmartBiii.png",
 			link: "https://smartbiii.com",
 		},
