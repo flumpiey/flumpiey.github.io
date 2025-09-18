@@ -141,7 +141,7 @@
 	<header class="space-y-2">
 		<h1 class="h1">Dru Connold</h1>
 		<p class="text-xl opacity-90">Full-Stack Developer & Founder of Malva Dev</p>
-		<p class="opacity-80">Blairgowrie, Gauteng, South Africa</p>
+		<p class="opacity-80">Randburg, Gauteng, South Africa</p>
 		<p>
 			<ObfuscatedEmailLink buttonClass="btn btn-sm variant-filled" />
 			<ObfuscatedTelegramLink buttonClass="btn btn-sm variant-filled" />
@@ -320,9 +320,8 @@
 		<h2>Achievements &amp; Interests</h2>
 		<ul>
 			<li>Qualified <strong>Day Skipper</strong> (sailing)</li>
-			<li>Former <strong>Mensa</strong> member</li>
 			<li>Scouter at 1st Edenvale &amp; Eastleigh Sea Scout Group</li>
-			<li>Sailing, Hiking, Web Design</li>
+			<li>Sailing, Hiking</li>
 		</ul>
 	</section>
 </section>
