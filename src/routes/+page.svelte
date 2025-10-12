@@ -24,7 +24,7 @@
 
 	const projects: IProject[] = [
 		{
-			title: "EngagementFit – Corporate Wellness Platform",
+			title: "EngagementFit - Corporate Wellness Platform",
 			cover:
 				"Corporate wellness platform rescue and rebuild, migrated to CodeIgniter 4 with new UI, dashboards, subscriptions, and reporting.",
 			overview:
@@ -40,7 +40,7 @@
 			impact:
 				"The platform became secure, scalable, and business-ready, enabling EngagementFit to manage affiliates, companies, and employees effectively.",
 			techStack: ["CodeIgniter 4", "PHP", "MySQL", "Bootstrap 5", "Chart.js", "DataTables", "AWS SES"],
-			link: "https://engagementfit.com",
+			link: "https://engagementfitdrive.com/",
 			image: "/EngagementFit.jpeg",
 		},
 		{
@@ -205,6 +205,15 @@
 			<li><strong>E-Commerce:</strong> Shopify, Vendure, Custom Memberships, Payments (Netcash, PayFast)</li>
 			<li><strong>DevOps & Cloud:</strong> AWS, DigitalOcean, Docker, Unraid, CI/CD Pipelines</li>
 			<li><strong>Other Expertise:</strong> SEO, Web Performance, Automation, Data Visualization</li>
+		</ul>
+		<h3>LANGUAGES &amp; FRAMEWORKS</h3>
+		<ul>
+			<li><strong>Frontend:</strong> JavaScript (ES6+) · TypeScript · HTML5 · CSS3 / SCSS · JSON</li>
+			<li><strong>Backend:</strong> PHP (CodeIgniter / Laravel) · Python (Django / FastAPI) · Node.js (Express / NestJS) · Go (basic tooling)</li>
+			<li><strong>Cross-Platform &amp; Mobile:</strong> Dart / Flutter · Electron.js · Tauri</li>
+			<li><strong>Scripting &amp; Automation:</strong> Bash · PowerShell · Make · npm / pnpm scripts</li>
+			<li><strong>Query &amp; Data Formats:</strong> SQL · PostgreSQL PL/pgSQL · GraphQL · REST API Schemas</li>
+			<li><strong>Markup &amp; Documentation:</strong> Markdown · YAML · XML · OpenAPI / Swagger</li>
 		</ul>
 	</section>
 
