@@ -3,6 +3,7 @@
 	import ObfuscatedTelegramLink from "$lib/components/ObfuscatedTelegramLink.svelte";
 	import LinkedInIcon from "$lib/icons/LinkedInIcon.svelte";
 	import GithubIcon from "$lib/icons/GithubIcon.svelte";
+	import DownloadIcon from "$lib/icons/DownloadIcon.svelte";
 	import ProjectModal from "$lib/components/ProjectModal.svelte";
 
 	import { getModalStore } from "@skeletonlabs/skeleton";
@@ -164,6 +165,15 @@
 			>
 				<GithubIcon className="w-4 h-4" />
 				<span class="sr-only">GitHub</span>
+			</a>
+			<a
+				class="btn btn-sm variant-filled"
+				href="/250000 Professional - Dru Connold - CV.pdf"
+				download
+				aria-label="Download CV"
+			>
+				<DownloadIcon className="w-4 h-4" />
+				<span class="sr-only">Download CV</span>
 			</a>
 		</p>
 	</header>

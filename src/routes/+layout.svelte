@@ -8,6 +8,7 @@
 	import ObfuscatedTelegramLink from "$lib/components/ObfuscatedTelegramLink.svelte";
 	import GithubIcon from "$lib/icons/GithubIcon.svelte";
 	import LinkedInIcon from "$lib/icons/LinkedInIcon.svelte";
+	import DownloadIcon from "$lib/icons/DownloadIcon.svelte";
 	import "highlight.js/styles/github-dark.css";
 	import { storeHighlightJs } from "@skeletonlabs/skeleton";
 	import css from "highlight.js/lib/languages/css";
@@ -130,6 +131,16 @@
 							<GithubIcon className="w-4 h-4" />
 							<span class="sr-only">GitHub</span>
 						</a>
+						<a
+							class="btn btn-sm variant-ghost-surface"
+							href="/250000 Professional - Dru Connold - CV.pdf"
+							download
+							aria-label="Download CV"
+							on:click={closeMobileMenu}
+						>
+							<DownloadIcon className="w-4 h-4" />
+							<span class="sr-only">Download CV</span>
+						</a>
 					</div>
 				</nav>
 			</div>
@@ -165,7 +176,7 @@
 			</ul>
 		</div>
 		<!-- Contact & Social Buttons -->
-		<div class="grid grid-cols-4 gap-2">
+		<div class="grid grid-cols-3 gap-2">
 			<ObfuscatedEmailLink buttonClass="btn btn-sm variant-filled" />
 			<ObfuscatedTelegramLink buttonClass="btn btn-sm variant-filled" />
 			<a
@@ -187,6 +198,15 @@
 			>
 				<GithubIcon className="w-4 h-4" />
 				<span class="sr-only">GitHub</span>
+			</a>
+			<a
+				class="btn btn-sm variant-filled col-span-3"
+				href="/250000 Professional - Dru Connold - CV.pdf"
+				download
+				aria-label="Download CV"
+			>
+				<DownloadIcon className="w-4 h-4" />
+				<span class="sr-only">Download CV</span>
 			</a>
 		</div>
 	</nav>
