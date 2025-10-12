@@ -176,7 +176,7 @@
 			</ul>
 		</div>
 		<!-- Contact & Social Buttons -->
-		<div class="grid grid-cols-3 gap-2">
+		<div class="grid grid-cols-4 gap-2">
 			<ObfuscatedEmailLink buttonClass="btn btn-sm variant-filled" />
 			<ObfuscatedTelegramLink buttonClass="btn btn-sm variant-filled" />
 			<a
@@ -200,7 +200,7 @@
 				<span class="sr-only">GitHub</span>
 			</a>
 			<a
-				class="btn btn-sm variant-filled col-span-3"
+				class="btn btn-sm variant-filled col-span-4"
 				href="/250000 Professional - Dru Connold - CV.pdf"
 				download
 				aria-label="Download CV"
