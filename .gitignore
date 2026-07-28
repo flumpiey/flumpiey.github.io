@@ -19,3 +19,18 @@ Thumbs.db
 # Vite
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# -----------------------------------------------------------------------------
+# Local tooling / agent scaffolding (do not commit)
+# -----------------------------------------------------------------------------
+# Cursor IDE project config, rules, hooks, and skills
+.cursor/
+
+# Agent skill packs and local agent assets
+.agents/
+
+# Spec Kit / Specify local project config and templates
+.specify/
+
+# Graphify knowledge-graph output (regenerable)
+graphify-out/

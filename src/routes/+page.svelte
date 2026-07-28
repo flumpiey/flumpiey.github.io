@@ -12,14 +12,17 @@
 	interface IProject {
 		title: string;
 		cover: string;
-		overview: string;
-		problem: string;
-		solution: string[];
-		impact: string;
+		overview?: string;
+		problem?: string;
+		solution?: string[];
+		impact?: string;
+		details?: string[];
 		techStack: string[];
 		link?: string;
+		linkLabel?: string;
 		nda?: boolean;
 		image?: string;
+		imageAlt?: string;
 	}
 
 	const projects: IProject[] = [
@@ -126,6 +129,23 @@
 			image: "/SmartBiii.png",
 			link: "https://smartbiii.com",
 		},
+		{
+			title: "manager-mcp - AI Access to Self-Hosted Accounting",
+			cover:
+				"Open source MCP server exposing a Manager.io accounting instance to AI assistants, read-only by default with per-domain write permissions.",
+			details: [
+				"Manager.io is free self-hosted accounting software with an HTTP API. Before this, no MCP server existed for it. The only prior AI integration was a single-author Bash CLI.",
+				"The API exposes roughly 650 paths, and the interesting work was deciding what not to expose. Auto-generation would have produced 650 tools, flooding the model's context window and degrading tool selection on every session. I shipped about ten hand-picked tools: resource discovery, six searchable collections, and seven report shortcuts for aged receivables, aged payables, bank balances, trial balance, profit and loss, balance sheet and tax summary.",
+				"A single write flag is the wrong shape for accounting, because drafting a quote and deleting a posted invoice carry entirely different risk. Permissions split by domain and by verb across 23 resource types in 9 domains, so create and edit never imply delete. Underneath that sits a denylist no configuration unlocks: access tokens, all chart of accounts and control account forms, tax codes, currencies, exchange rates, starting balances, bank reconciliations. An agent that can mint its own tokens escapes the permission model entirely, so that path is closed by construction, enforced in the HTTP client layer rather than at the tool layer.",
+				"The upstream OpenAPI document ships with an empty schemas block, so write payload shapes were undocumented. The first release shipped reads only, with writes rolled out one domain at a time and each shape verified against a test business. The constraint set the roadmap.",
+				"52 tests across 7 files, all mocked with respx, so the suite runs without a live instance. CI runs ruff and pytest on Python 3.10 and 3.12. Built with GitHub Spec Kit, with the spec, plan, tasks and checklists committed under specs/.",
+			],
+			techStack: ["Python 3.10+", "FastMCP", "httpx", "pytest", "respx", "MIT licence"],
+			link: "https://github.com/flumpiey/manager-mcp",
+			linkLabel: "View on GitHub",
+			image: "/manager-mcp-cover.png",
+			imageAlt: "manager-mcp cover image showing MCP server configuration",
+		},
 	];
 
 	function openProject(project: IProject): void {
@@ -200,6 +220,7 @@
 		<ul>
 			<li><strong>Frontend Development:</strong> React, Next.js, Angular, Tailwind, Bootstrap</li>
 			<li><strong>Backend Development:</strong> Django, Node.js, PHP (CodeIgniter, Vendure)</li>
+			<li><strong>AI & Agent Tooling:</strong> MCP servers, Claude API, RAG pipelines, n8n, tool design for LLM agents</li>
 			<li><strong>Mobile Apps:</strong> React Native, Cross-platform Solutions</li>
 			<li><strong>Databases:</strong> PostgreSQL, MySQL, Firebase, Supabase</li>
 			<li><strong>E-Commerce:</strong> Shopify, Vendure, Custom Memberships, Payments (Netcash, PayFast)</li>
@@ -267,7 +288,7 @@
 						{#if p.image}
 							<img
 								src={p.image}
-								alt={`${p.title} screenshot`}
+								alt={p.imageAlt ?? `${p.title} screenshot`}
 								class="block w-full aspect-[16/9] object-cover m-0"
 							/>
 						{:else}
@@ -290,7 +311,7 @@
 										class="btn btn-sm variant-ghost w-full"
 										href={p.link}
 										target="_blank"
-										rel="noreferrer">Visit site</a
+										rel="noreferrer">{p.linkLabel ?? "Visit site"}</a
 									>
 								{:else}
 									<button
