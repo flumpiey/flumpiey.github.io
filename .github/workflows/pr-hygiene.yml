@@ -1,0 +1,47 @@
+name: pr-hygiene
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+permissions:
+  contents: read
+  pull-requests: read
+jobs:
+  commitlint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Lint PR commits
+        run: npx --no -- commitlint --from "${{ github.event.pull_request.base.sha }}" --to "${{ github.event.pull_request.head.sha }}" --verbose
+      - name: Lint PR title
+        env:
+          TITLE: ${{ github.event.pull_request.title }}
+        run: printf '%s\n' "$TITLE" | npx --no -- commitlint --verbose
+  no-ai-attribution:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Reject AI attribution in title, body and commits
+        env:
+          TITLE: ${{ github.event.pull_request.title }}
+          BODY: ${{ github.event.pull_request.body }}
+          GH_TOKEN: ${{ github.token }}
+          PR: ${{ github.event.pull_request.number }}
+          REPO: ${{ github.repository }}
+        run: |
+          pattern='co-authored-by:.*(claude|anthropic|cursor|openai|codex|copilot|gemini|opencode)|generated with \[?(claude|cursor|codex|copilot|gemini|opencode)|claude-session:|(claude\.ai|claude\.com)/code'
+          msgs=$(gh api "repos/$REPO/pulls/$PR/commits" --paginate --jq '.[].commit.message')
+          all=$(printf '%s\n%s\n%s\n' "$TITLE" "$BODY" "$msgs")
+          if printf '%s\n' "$all" | grep -qiE "$pattern"; then
+            printf '%s\n' "$all" | grep -niE "$pattern"
+            echo "::error::AI attribution found in PR title, body or commits."
+            exit 1
+          fi

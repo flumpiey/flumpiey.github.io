@@ -4,7 +4,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
-		"prepare": "svelte-kit sync",
+		"prepare": "svelte-kit sync && lefthook install",
 		"build": "vite build",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
@@ -12,6 +12,8 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.2.4",
+		"@commitlint/cli": "^21.2.4",
+		"@commitlint/config-conventional": "^21.2.4",
 		"@skeletonlabs/skeleton": "^2.11.0",
 		"@skeletonlabs/tw-plugin": "^0.4.1",
 		"@sveltejs/adapter-auto": "^3.0.0",
@@ -22,6 +24,7 @@
 		"@tailwindcss/typography": "^0.5.16",
 		"@types/node": "^22.13.10",
 		"autoprefixer": "^10.4.21",
+		"lefthook": "^2.2.3",
 		"postcss": "^8.5.3",
 		"svelte": "^4.2.7",
 		"svelte-check": "^4.0.0",

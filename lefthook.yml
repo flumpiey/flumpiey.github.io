@@ -1,0 +1,13 @@
+commit-msg:
+  piped: true
+  commands:
+    strip-ai-attribution:
+      priority: 1
+      run: |
+        f="{1}"
+        grep -viE '^[[:space:]]*(co-authored-by:.*(claude|anthropic|cursor|openai|codex|copilot|gemini|opencode)|claude-session:)|generated with \[?(claude|cursor|codex|copilot|gemini|opencode)|(claude\.ai|claude\.com)/code' "$f" > "$f.tmp" || true
+        mv "$f.tmp" "$f"
+        sed -i -e :a -e '/^\n*$/{$d;N;ba' -e '}' "$f"
+    commitlint:
+      priority: 2
+      run: npx --no -- commitlint --edit {1}
