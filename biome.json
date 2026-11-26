@@ -1,5 +1,5 @@
 {
-	"$schema": "https://biomejs.dev/schemas/2.2.4/schema.json",
+	"$schema": "https://biomejs.dev/schemas/2.6.9/schema.json",
 	"vcs": {
 		"enabled": false,
 		"clientKind": "git",
@@ -11,24 +11,26 @@
 	"formatter": {
 		"enabled": true,
 		"indentStyle": "tab",
-		"ignore": [
-			"node_modules/**",
-			"build/**",
-			".svelte-kit/**",
-			"static/**",
-			"**/*.svelte"
+		"includes": [
+			"**",
+			"!**/node_modules/**",
+			"!**/build/**",
+			"!**/.svelte-kit/**",
+			"!**/static/**",
+			"!**/*.svelte"
 		]
 	},
 	"linter": {
 		"enabled": true,
 		"rules": {
-			"recommended": true
+			"preset": "recommended"
 		},
-		"ignore": [
-			"node_modules/**",
-			"build/**",
-			".svelte-kit/**",
-			"**/*.svelte"
+		"includes": [
+			"**",
+			"!**/node_modules/**",
+			"!**/build/**",
+			"!**/.svelte-kit/**",
+			"!**/*.svelte"
 		]
 	},
 	"javascript": {
@@ -46,7 +48,7 @@
 	},
 	"overrides": [
 		{
-			"include": ["**/*.svelte"],
+			"includes": ["**/*.svelte"],
 			"formatter": { "enabled": false },
 			"linter": { "enabled": false }
 		}
