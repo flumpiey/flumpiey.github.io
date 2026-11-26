@@ -1,0 +1,4 @@
+# orca.yaml
+scripts:
+  setup: |
+    pnpm install --frozen-lockfile
