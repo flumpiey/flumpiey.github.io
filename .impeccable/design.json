@@ -1,0 +1,289 @@
+{
+	"schemaVersion": 2,
+	"generatedAt": "2026-11-26T10:25:00.780Z",
+	"title": "Design System: Dru Connold Portfolio",
+	"extensions": {
+		"colorMeta": {
+			"midnight-hull": {
+				"role": "neutral",
+				"displayName": "Midnight Hull",
+				"canonical": "#15171F",
+				"tonalRamp": [
+					"#08090C",
+					"#0D0E13",
+					"#111219",
+					"#15171F",
+					"#44454C",
+					"#737479",
+					"#ADAEB1",
+					"#DCDCDD"
+				]
+			},
+			"deck": {
+				"role": "neutral",
+				"displayName": "Deck",
+				"canonical": "#1A1C26",
+				"tonalRamp": [
+					"#0A0B0F",
+					"#101117",
+					"#15161E",
+					"#1A1C26",
+					"#484951",
+					"#76777D",
+					"#AFB0B3",
+					"#DDDDDE"
+				]
+			},
+			"bulkhead": {
+				"role": "neutral",
+				"displayName": "Bulkhead",
+				"canonical": "#202330",
+				"tonalRamp": [
+					"#0D0E13",
+					"#13151D",
+					"#1A1C26",
+					"#202330",
+					"#4D4F59",
+					"#797B83",
+					"#B1B2B7",
+					"#DEDEE0"
+				]
+			},
+			"rail": {
+				"role": "neutral",
+				"displayName": "Rail",
+				"canonical": "#27293A",
+				"tonalRamp": [
+					"#101017",
+					"#171923",
+					"#1F212E",
+					"#27293A",
+					"#525461",
+					"#7D7F89",
+					"#B3B4BA",
+					"#DFDFE1"
+				]
+			},
+			"slate-wash": {
+				"role": "neutral",
+				"displayName": "Slate Wash",
+				"canonical": "#2B2E40",
+				"tonalRamp": [
+					"#11121A",
+					"#1A1C26",
+					"#222533",
+					"#2B2E40",
+					"#555866",
+					"#80828C",
+					"#B5B6BC",
+					"#DFE0E2"
+				]
+			},
+			"fog-white": {
+				"role": "neutral",
+				"displayName": "Fog White",
+				"canonical": "#DFE0E2",
+				"tonalRamp": [
+					"#595A5A",
+					"#868688",
+					"#B2B3B5",
+					"#DFE0E2",
+					"#E5E6E8",
+					"#ECECEE",
+					"#F4F4F5",
+					"#FAFAFB"
+				]
+			},
+			"signal-crimson": {
+				"role": "primary",
+				"displayName": "Signal Crimson",
+				"canonical": "#D4163C",
+				"tonalRamp": [
+					"#550918",
+					"#7F0D24",
+					"#AA1230",
+					"#D4163C",
+					"#DD4563",
+					"#E5738A",
+					"#F0ADBB",
+					"#F9DCE2"
+				]
+			},
+			"log-body": {
+				"role": "neutral",
+				"displayName": "Log Body",
+				"canonical": "#D1D5DB",
+				"tonalRamp": [
+					"#545558",
+					"#7D8083",
+					"#A7AAAF",
+					"#D1D5DB",
+					"#DADDE2",
+					"#E3E6E9",
+					"#EFF0F2",
+					"#F8F9FA"
+				]
+			},
+			"log-heading": {
+				"role": "neutral",
+				"displayName": "Log Heading",
+				"canonical": "#FFFFFF",
+				"tonalRamp": [
+					"#666666",
+					"#999999",
+					"#CCCCCC",
+					"#FFFFFF",
+					"#FFFFFF",
+					"#FFFFFF",
+					"#FFFFFF",
+					"#FFFFFF"
+				]
+			},
+			"log-bullet": {
+				"role": "neutral",
+				"displayName": "Log Bullet",
+				"canonical": "#4B5563",
+				"tonalRamp": [
+					"#1E2228",
+					"#2D333B",
+					"#3C444F",
+					"#4B5563",
+					"#6F7782",
+					"#9399A1",
+					"#C0C4C8",
+					"#E4E6E8"
+				]
+			}
+		},
+		"typographyMeta": {
+			"display": {
+				"displayName": "Display",
+				"purpose": "The page name only."
+			},
+			"headline": {
+				"displayName": "Headline",
+				"purpose": "Section headings."
+			},
+			"title": {
+				"displayName": "Title",
+				"purpose": "Role headings."
+			},
+			"body": {
+				"displayName": "Body",
+				"purpose": "Reading sections."
+			},
+			"label": {
+				"displayName": "Label",
+				"purpose": "Buttons and metadata."
+			}
+		},
+		"shadows": [
+			{
+				"name": "Resting overlay",
+				"value": "0 1px 3px 0 rgb(0 0 0 / .1), 0 1px 2px -1px rgb(0 0 0 / .1)",
+				"purpose": "Mobile menu and sidebar portrait."
+			},
+			{
+				"name": "Hover lift",
+				"value": "0 20px 25px -5px rgb(0 0 0 / .1), 0 8px 10px -6px rgb(0 0 0 / .1)",
+				"purpose": "Project card on hover, with 101% scale."
+			}
+		],
+		"motion": [
+			{
+				"name": "ease-standard",
+				"value": "150ms cubic-bezier(0.4, 0, 0.2, 1)",
+				"purpose": "Button and card state changes."
+			}
+		],
+		"breakpoints": [
+			{
+				"name": "sm",
+				"value": "640px"
+			},
+			{
+				"name": "md",
+				"value": "768px"
+			},
+			{
+				"name": "lg",
+				"value": "1024px"
+			}
+		]
+	},
+	"components": [
+		{
+			"name": "Filled Button",
+			"kind": "button",
+			"refersTo": "button-filled",
+			"description": "Contact controls, CV download and View details.",
+			"html": "<button class=\"ds-filled\">View details</button>",
+			"css": ".ds-filled { display: inline-flex; align-items: center; justify-content: center; border: 0; border-radius: 24px; padding: 6px 12px; font-family: Inter, system-ui, sans-serif; font-size: .875rem; line-height: 1.25rem; transition: all .15s cubic-bezier(.4,0,.2,1); } .ds-filled:hover { filter: brightness(1.15); } .ds-filled:active { transform: scale(.95); } .ds-filled:focus-visible { outline: auto; } .ds-filled { background: #DFE0E2; color: #15171F; }"
+		},
+		{
+			"name": "Ghost Button",
+			"kind": "button",
+			"refersTo": "button-ghost",
+			"description": "Navigation and external links.",
+			"html": "<button class=\"ds-ghost\">Visit site</button>",
+			"css": ".ds-ghost { display: inline-flex; align-items: center; justify-content: center; border: 0; border-radius: 24px; padding: 6px 12px; font-family: Inter, system-ui, sans-serif; font-size: .875rem; line-height: 1.25rem; transition: all .15s cubic-bezier(.4,0,.2,1); } .ds-ghost:hover { filter: brightness(1.15); } .ds-ghost:active { transform: scale(.95); } .ds-ghost:focus-visible { outline: auto; } .ds-ghost { background: rgb(43 46 64 / .2); box-shadow: inset 0 0 0 1px #2B2E40; color: #DFE0E2; }"
+		},
+		{
+			"name": "Sidebar Navigation",
+			"kind": "nav",
+			"refersTo": "sidebar",
+			"description": "Fixed section links from 768px.",
+			"html": "<nav class=\"ds-side\"><a class=\"ds-ghost\" href=\"#\">Summary</a><a class=\"ds-ghost\" href=\"#\">Projects</a></nav>",
+			"css": ".ds-ghost { display: inline-flex; align-items: center; justify-content: center; border: 0; border-radius: 24px; padding: 6px 12px; font-family: Inter, system-ui, sans-serif; font-size: .875rem; line-height: 1.25rem; transition: all .15s cubic-bezier(.4,0,.2,1); } .ds-ghost:hover { filter: brightness(1.15); } .ds-ghost:active { transform: scale(.95); } .ds-ghost:focus-visible { outline: auto; } .ds-ghost { background: rgb(43 46 64 / .2); box-shadow: inset 0 0 0 1px #2B2E40; color: #DFE0E2; } .ds-side { width: 256px; box-sizing: border-box; padding: 24px; display: flex; flex-direction: column; gap: 8px; background: #1A1C26; border-right: 1px solid #27293A; } .ds-side a { justify-content: flex-start; text-decoration: none; }"
+		},
+		{
+			"name": "Project Card",
+			"kind": "card",
+			"refersTo": "card-project",
+			"description": "Square card with screenshot, summary and two actions.",
+			"html": "<div class=\"ds-card\"><div class=\"ds-shot\"></div><div class=\"ds-body\"><h3>Project title</h3><p>One-line summary of the work.</p><div class=\"ds-row\"><button class=\"ds-filled\">View details</button><button class=\"ds-ghost\">Visit site</button></div></div></div>",
+			"css": ".ds-filled { display: inline-flex; align-items: center; justify-content: center; border: 0; border-radius: 24px; padding: 6px 12px; font-family: Inter, system-ui, sans-serif; font-size: .875rem; line-height: 1.25rem; transition: all .15s cubic-bezier(.4,0,.2,1); } .ds-filled:hover { filter: brightness(1.15); } .ds-filled:active { transform: scale(.95); } .ds-filled:focus-visible { outline: auto; } .ds-filled { background: #DFE0E2; color: #15171F; } .ds-ghost { display: inline-flex; align-items: center; justify-content: center; border: 0; border-radius: 24px; padding: 6px 12px; font-family: Inter, system-ui, sans-serif; font-size: .875rem; line-height: 1.25rem; transition: all .15s cubic-bezier(.4,0,.2,1); } .ds-ghost:hover { filter: brightness(1.15); } .ds-ghost:active { transform: scale(.95); } .ds-ghost:focus-visible { outline: auto; } .ds-ghost { background: rgb(43 46 64 / .2); box-shadow: inset 0 0 0 1px #2B2E40; color: #DFE0E2; } .ds-card { max-width: 28rem; background: #1A1C26; color: #D1D5DB; font-family: Inter, system-ui, sans-serif; transition: all .15s cubic-bezier(.4,0,.2,1); } .ds-card:hover { transform: scale(1.01); box-shadow: 0 20px 25px -5px rgb(0 0 0 / .1), 0 8px 10px -6px rgb(0 0 0 / .1); } .ds-shot { aspect-ratio: 16/9; background: #202330; } .ds-body { padding: 32px; } .ds-body h3 { margin: 0; font-size: 1rem; color: #FFFFFF; } .ds-body p { font-size: .875rem; opacity: .8; } .ds-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }"
+		},
+		{
+			"name": "Project Modal",
+			"kind": "custom",
+			"refersTo": "modal-project",
+			"description": "Detail view for one project.",
+			"html": "<div class=\"ds-modal\"><div class=\"ds-head\"><h2>Project title</h2><button class=\"ds-ghost\">Close</button></div><p>Problem, solution and impact.</p></div>",
+			"css": ".ds-ghost { display: inline-flex; align-items: center; justify-content: center; border: 0; border-radius: 24px; padding: 6px 12px; font-family: Inter, system-ui, sans-serif; font-size: .875rem; line-height: 1.25rem; transition: all .15s cubic-bezier(.4,0,.2,1); } .ds-ghost:hover { filter: brightness(1.15); } .ds-ghost:active { transform: scale(.95); } .ds-ghost:focus-visible { outline: auto; } .ds-ghost { background: rgb(43 46 64 / .2); box-shadow: inset 0 0 0 1px #2B2E40; color: #DFE0E2; } .ds-modal { width: min(92vw, 48rem); box-sizing: border-box; padding: 16px; border-radius: 12px; background: #1A1C26; color: #D1D5DB; font-family: Inter, system-ui, sans-serif; } .ds-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; } .ds-head h2 { margin: 0; font-size: 1.125rem; font-weight: 600; color: #FFFFFF; }"
+		}
+	],
+	"narrative": {
+		"northStar": "The Workshop Log",
+		"overview": "The site is a plain record of work: the problem, the fix and the result. It is restrained and scannable, and it puts evidence before decoration. Clients and recruiters find facts fast and then make contact.\n\nThe page is dark only. One column of text runs beside a fixed sidebar. Tone separates the surfaces. Controls stay quiet, so the content carries the page.",
+		"keyCharacteristics": [
+			"Dark blue-charcoal surfaces with cool off-white text.",
+			"Plain headings and lists in a single reading column.",
+			"Pill-shaped controls against square project cards.",
+			"Flat layers, with shadow only for hover and overlays."
+		],
+		"rules": [
+			{
+				"name": "The Rare Signal Rule",
+				"body": "Signal Crimson is reserved. Do not use it for fills, headings or decoration.",
+				"section": "colors"
+			},
+			{
+				"name": "The Tone First Rule",
+				"body": "Separate surfaces with tone. Add a shadow only for hover or an overlay.",
+				"section": "elevation"
+			}
+		],
+		"dos": [
+			"Do show the problem, the work and the result in that order.",
+			"Do keep surfaces to the blue-charcoal tones, with Midnight Hull as the page.",
+			"Do keep controls as pills and project cards square.",
+			"Do give every icon-only control a text label for screen readers."
+		],
+		"donts": [
+			"Don't add decoration that competes with the content.",
+			"Don't use Signal Crimson as a fill, heading colour or ornament.",
+			"Don't add shadows to surfaces at rest, except the existing portrait and mobile menu."
+		]
+	}
+}
