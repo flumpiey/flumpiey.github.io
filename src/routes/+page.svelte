@@ -1,12 +1,14 @@
 <script lang="ts">
-	import ObfuscatedEmailLink from "$lib/components/ObfuscatedEmailLink.svelte";
-	import ObfuscatedTelegramLink from "$lib/components/ObfuscatedTelegramLink.svelte";
-	import LinkedInIcon from "$lib/icons/LinkedInIcon.svelte";
-	import GithubIcon from "$lib/icons/GithubIcon.svelte";
-	import DownloadIcon from "$lib/icons/DownloadIcon.svelte";
-	import ProjectModal from "$lib/components/ProjectModal.svelte";
+	
 
 	import { getModalStore } from "@skeletonlabs/skeleton";
+import ObfuscatedEmailLink from "$lib/components/ObfuscatedEmailLink.svelte";
+	import ObfuscatedTelegramLink from "$lib/components/ObfuscatedTelegramLink.svelte";
+	import ProjectModal from "$lib/components/ProjectModal.svelte";
+	import DownloadIcon from "$lib/icons/DownloadIcon.svelte";
+	import GithubIcon from "$lib/icons/GithubIcon.svelte";
+	import LinkedInIcon from "$lib/icons/LinkedInIcon.svelte";
+
 	const modalStore = getModalStore();
 
 	interface IProject {

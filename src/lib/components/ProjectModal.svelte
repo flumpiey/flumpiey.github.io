@@ -1,6 +1,8 @@
 <script lang="ts">
-	import type { SvelteComponent } from "svelte";
+	
 	import { getModalStore } from "@skeletonlabs/skeleton";
+import type { SvelteComponent } from "svelte";
+
 	const modalStore = getModalStore();
 	export let project: {
 		title: string;

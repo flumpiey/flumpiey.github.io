@@ -6,9 +6,9 @@
 	import { slide } from "svelte/transition";
 	import ObfuscatedEmailLink from "$lib/components/ObfuscatedEmailLink.svelte";
 	import ObfuscatedTelegramLink from "$lib/components/ObfuscatedTelegramLink.svelte";
+	import DownloadIcon from "$lib/icons/DownloadIcon.svelte";
 	import GithubIcon from "$lib/icons/GithubIcon.svelte";
 	import LinkedInIcon from "$lib/icons/LinkedInIcon.svelte";
-	import DownloadIcon from "$lib/icons/DownloadIcon.svelte";
 	import "highlight.js/styles/github-dark.css";
 	import { storeHighlightJs } from "@skeletonlabs/skeleton";
 	import css from "highlight.js/lib/languages/css";
