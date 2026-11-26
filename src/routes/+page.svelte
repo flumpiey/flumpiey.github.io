@@ -1,15 +1,12 @@
 <script lang="ts">
-	
+	import ObfuscatedEmailLink from "#lib/components/ObfuscatedEmailLink.svelte";
+	import ObfuscatedTelegramLink from "#lib/components/ObfuscatedTelegramLink.svelte";
+	import ProjectModal from "#lib/components/ProjectModal.svelte";
+	import DownloadIcon from "#lib/icons/DownloadIcon.svelte";
+	import GithubIcon from "#lib/icons/GithubIcon.svelte";
+	import LinkedInIcon from "#lib/icons/LinkedInIcon.svelte";
 
-	import { getModalStore } from "@skeletonlabs/skeleton";
-import ObfuscatedEmailLink from "$lib/components/ObfuscatedEmailLink.svelte";
-	import ObfuscatedTelegramLink from "$lib/components/ObfuscatedTelegramLink.svelte";
-	import ProjectModal from "$lib/components/ProjectModal.svelte";
-	import DownloadIcon from "$lib/icons/DownloadIcon.svelte";
-	import GithubIcon from "$lib/icons/GithubIcon.svelte";
-	import LinkedInIcon from "$lib/icons/LinkedInIcon.svelte";
-
-	const modalStore = getModalStore();
+	let projectModal: ReturnType<typeof ProjectModal> | undefined = $state();
 
 	interface IProject {
 		title: string;
@@ -149,27 +146,18 @@ import ObfuscatedEmailLink from "$lib/components/ObfuscatedEmailLink.svelte";
 			imageAlt: "manager-mcp cover image showing MCP server configuration",
 		},
 	];
-
-	function openProject(project: IProject): void {
-		modalStore.trigger({
-			type: "component",
-			component: { ref: ProjectModal, props: { project } },
-			modalClasses: "max-w-3xl w-[min(92vw,48rem)] overflow-hidden rounded-xl bg-surface-100-800-token",
-			backdropClasses: "bg-black/40 backdrop-blur-sm",
-		});
-	}
 </script>
 
 <section class="container mx-auto p-6 pt-20 md:pt-10 md:p-10 space-y-10">
 	<header class="space-y-2">
-		<h1 class="h1">Dru Connold</h1>
+		<h1 class="font-[system-ui] text-3xl md:text-5xl">Dru Connold</h1>
 		<p class="text-xl opacity-90">Full-Stack Developer & Founder of Malva Dev</p>
 		<p class="opacity-80">Randburg, Gauteng, South Africa</p>
 		<p>
-			<ObfuscatedEmailLink buttonClass="btn btn-sm variant-filled" />
-			<ObfuscatedTelegramLink buttonClass="btn btn-sm variant-filled" />
+			<ObfuscatedEmailLink buttonClass="btn btn-sm preset-filled" />
+			<ObfuscatedTelegramLink buttonClass="btn btn-sm preset-filled" />
 			<a
-				class="btn btn-sm variant-filled"
+				class="btn btn-sm preset-filled"
 				href="https://linkedin.com/in/dru-connold"
 				target="_blank"
 				rel="noreferrer"
@@ -179,7 +167,7 @@ import ObfuscatedEmailLink from "$lib/components/ObfuscatedEmailLink.svelte";
 				<span class="sr-only">LinkedIn</span>
 			</a>
 			<a
-				class="btn btn-sm variant-filled"
+				class="btn btn-sm preset-filled"
 				href="https://github.com/flumpiey"
 				target="_blank"
 				rel="noreferrer"
@@ -189,7 +177,7 @@ import ObfuscatedEmailLink from "$lib/components/ObfuscatedEmailLink.svelte";
 				<span class="sr-only">GitHub</span>
 			</a>
 			<a
-				class="btn btn-sm variant-filled"
+				class="btn btn-sm preset-filled"
 				href="/250000 Professional - Dru Connold - CV.pdf"
 				download
 				aria-label="Download CV"
@@ -246,7 +234,7 @@ import ObfuscatedEmailLink from "$lib/components/ObfuscatedEmailLink.svelte";
 	>
 		<h2>Professional Experience</h2>
 		<div>
-			<h3 class="m-0">MalvaDev – Business Owner</h3>
+			<h3 class="m-0!">MalvaDev – Business Owner</h3>
 			<p class="mt-1 text-sm opacity-80">June 2023 – Present | Randburg, Gauteng, South Africa</p>
 			<ul>
 				<li>Delivering full-stack development services for international and South African clients.</li>
@@ -257,7 +245,7 @@ import ObfuscatedEmailLink from "$lib/components/ObfuscatedEmailLink.svelte";
 			</ul>
 		</div>
 		<div>
-			<h3 class="m-0">SDF – Export Parts Manager</h3>
+			<h3 class="m-0!">SDF – Export Parts Manager</h3>
 			<p class="mt-1 text-sm opacity-80">April 2016 – May 2023 | Southern Africa</p>
 			<ul>
 				<li>Managed spare parts distribution across Southern Africa, streamlining logistics and workflows.</li>
@@ -266,7 +254,7 @@ import ObfuscatedEmailLink from "$lib/components/ObfuscatedEmailLink.svelte";
 			</ul>
 		</div>
 		<div>
-			<h3 class="m-0">ISIS-DIES – Maintenance Head / Engineering Assistant</h3>
+			<h3 class="m-0!">ISIS-DIES – Maintenance Head / Engineering Assistant</h3>
 			<p class="mt-1 text-sm opacity-80">August 2010 – February 2016 | Johannesburg, South Africa</p>
 			<ul>
 				<li>Progressed from Safety Coordinator to Head of Maintenance.</li>
@@ -281,43 +269,43 @@ import ObfuscatedEmailLink from "$lib/components/ObfuscatedEmailLink.svelte";
 		class="prose prose-invert max-w-none space-y-6"
 	>
 		<h2 class="prose prose-invert">Projects</h2>
-		<div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+		<div class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 			{#each projects as p (p.title)}
 				<div
-					class="card preset-filled-surface-100-900 border-[1px] border-surface-200-800 card-hover divide-surface-200-800 block max-w-md divide-y overflow-hidden p-0 rounded-none m-0"
+					class="block max-w-md overflow-hidden rounded-none border border-[#e5e7eb] bg-surface-800 inset-ring inset-ring-[rgb(250_250_250/0.05)] p-0 m-0 transition-all hover:scale-101 hover:shadow-xl"
 				>
 					<header>
 						{#if p.image}
 							<img
 								src={p.image}
 								alt={p.imageAlt ?? `${p.title} screenshot`}
-								class="block w-full aspect-[16/9] object-cover m-0"
+								class="block w-full aspect-[16/9] object-cover m-0!"
 							/>
 						{:else}
-							<div class="aspect-[16/9] w-full bg-surface-200-700-token flex items-center justify-center">
+							<div class="aspect-[16/9] w-full bg-surface-700 flex items-center justify-center">
 								<span class="text-xs opacity-70">Screenshot Placeholder</span>
 							</div>
 						{/if}
 					</header>
-					<article class="space-y-4 p-4">
+					<article class="space-y-4 border-t border-[#e5e7eb] p-4">
 						<div class="p-4">
-							<h3 class="m-0 text-base font-semibold">{p.title}</h3>
+							<h3 class="m-0! text-base font-semibold">{p.title}</h3>
 							<p class="mt-1 text-sm opacity-80">{p.cover}</p>
 							<div class="mt-3 grid grid-cols-2 gap-2">
 								<button
-									class="btn btn-sm variant-filled w-full"
-									on:click={() => openProject(p)}>View details</button
+									class="btn btn-sm preset-filled w-full"
+									onclick={() => projectModal!.open(p)}>View details</button
 								>
 								{#if p.link}
 									<a
-										class="btn btn-sm variant-ghost w-full"
+										class="btn btn-sm preset-ghost-surface w-full underline"
 										href={p.link}
 										target="_blank"
 										rel="noreferrer">{p.linkLabel ?? "Visit site"}</a
 									>
 								{:else}
 									<button
-										class="btn btn-sm variant-ghost w-full opacity-60 cursor-not-allowed"
+										class="btn btn-sm preset-ghost-surface w-full opacity-60 cursor-not-allowed"
 										disabled
 									>
 										Under NDA
@@ -329,8 +317,6 @@ import ObfuscatedEmailLink from "$lib/components/ObfuscatedEmailLink.svelte";
 				</div>
 			{/each}
 		</div>
-
-		<!-- Modal content handled by global component modal -->
 	</section>
 
 	<section
@@ -367,3 +353,5 @@ import ObfuscatedEmailLink from "$lib/components/ObfuscatedEmailLink.svelte";
 		</ul>
 	</section>
 </section>
+
+<ProjectModal bind:this={projectModal} />
