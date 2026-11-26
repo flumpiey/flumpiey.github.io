@@ -1,6 +1,7 @@
 # Conventions
 
 ## Content
+
 - A project card is one entry in `projects` in `src/routes/+page.svelte`; the keyed each uses `title`, so titles must be unique.
 - The project shape is declared twice: `IProject` in `+page.svelte` and the `project` prop in `ProjectModal.svelte`. Change both.
 - Modal body: `details` (paragraphs) replaces the `overview`/`problem`/`solution`/`impact` layout.
@@ -10,6 +11,7 @@
 - Static assets use root-absolute paths (`/name.png`).
 
 ## Code
+
 - `<script lang="ts">`, tabs, double quotes in TS imports and attributes.
 - Style with Tailwind utilities and Skeleton classes (`btn`, `variant-*`, `*-token`); no component `<style>` blocks.
 - Write class names literally: purgecss can drop classes assembled at runtime.

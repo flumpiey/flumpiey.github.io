@@ -40,7 +40,7 @@ project_name: "flumpiey.github.io"
 # The first language server is the default language and the respective language server will be used as a fallback.
 # Note that when using the JetBrains backend, language servers are not used and this list is correspondingly ignored.
 language_servers:
-- svelte
+  - svelte
 
 # the encoding used by text files in the project
 # For a list of possible encodings, see https://docs.python.org/3.11/library/codecs.html#standard-encodings
@@ -90,7 +90,7 @@ ls_specific_settings: {}
 #     - "./subproject1"
 #     - "./subproject2"
 ls_workspace_folders:
-- "."
+  - "."
 
 # list of additional workspace folder paths for cross-package reference support.
 # Paths can be absolute or relative to the project root.
@@ -114,7 +114,7 @@ ls_additional_workspace_folders: []
 #     - "**/obj/**"
 # Note: global ignored_paths from serena_config.yml are also applied additively.
 ignored_paths:
-- "flumpiey.github.io-Output/**"
+  - "flumpiey.github.io-Output/**"
 
 # whether the project is in read-only mode
 # If set to true, all editing tools will be disabled and attempts to use them will result in an error

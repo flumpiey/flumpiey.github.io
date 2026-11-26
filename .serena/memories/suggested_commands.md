@@ -7,6 +7,7 @@
 - No `test`, `lint` or `format` script.
 
 ## Windows
+
 - Host is Windows; the primary shell is PowerShell, Git Bash is available. A second `bash.exe` on PATH targets WSL, so do not rely on bare `bash` in tooling.
 - `core.autocrlf` is `true`.
 - Quote static paths with spaces or `&` (CV PDF, portrait image).
