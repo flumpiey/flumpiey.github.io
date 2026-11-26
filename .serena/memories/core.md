@@ -5,15 +5,15 @@ Personal portfolio / CV site for one person. Single prerendered page, no backend
 ## Source map
 
 - `src/routes/+page.svelte`: all page content (header, summary, skills, experience, projects, education, certifications, interests) and the inline `projects` array.
-- `src/routes/+layout.svelte`: Skeleton `AppShell`, mobile app bar, desktop sidebar, `navLinks`, global `Modal` registry, Skeleton store setup.
+- `src/routes/+layout.svelte`: global CSS import, mobile app bar and menu, desktop sidebar, `navLinks`.
 - `src/routes/+page.server.ts`: `prerender = true`.
-- `src/lib/components/`: `ProjectModal`, obfuscated contact links. `src/lib/icons/`: inline SVG icons with a `className` prop.
+- `src/lib/components/`: `ProjectModal` (native `<dialog>`), obfuscated contact links. `src/lib/icons/`: inline SVG icons with a `className` prop.
 - `static/`: CV PDF, portrait, project images, favicons.
 - `README.md` is unedited create-svelte boilerplate; do not treat it as documentation.
 
 ## Invariants
 
-- `adapter-static` with `404.html` fallback, `paths.base = ""`, `relative: false`: the site assumes it is served at the domain root.
+- `adapter-static` with `404.html` fallback, `paths.base = ""`, `relative: false` (all in `vite.config.ts`): the site assumes it is served at the domain root.
 - A push to `main` deploys to GitHub Pages immediately.
 - The repository is public: no secrets or private notes in tracked files, including `.serena/`.
 - Email and Telegram handle stay base64-encoded and are decoded in `onMount`; never put them in markup as plain text.

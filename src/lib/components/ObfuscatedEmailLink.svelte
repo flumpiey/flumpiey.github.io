@@ -1,16 +1,23 @@
 <script lang="ts">
-	import { createEventDispatcher, onMount } from "svelte";
-	import MailIcon from "$lib/icons/MailIcon.svelte";
+	import { onMount, type Snippet } from "svelte";
+	import MailIcon from "#lib/icons/MailIcon.svelte";
 
-	export let buttonClass: string = "btn btn-sm variant-ghost-surface";
-	export let labelFallback: string = "Email";
+	let {
+		buttonClass = "btn btn-sm preset-ghost-surface",
+		labelFallback = "Email",
+		onclick,
+		children,
+	}: {
+		buttonClass?: string;
+		labelFallback?: string;
+		onclick?: () => void;
+		children?: Snippet;
+	} = $props();
 
 	const EMAIL_B64: string = "ZHJ1QG1hbHZhZGV2LmNvbQ=="; // dru@malvadev.com
 
-	let email: string = "";
-	let href: string = "#";
-
-	const dispatch = createEventDispatcher();
+	let email: string = $state("");
+	let href: string = $state("#");
 
 	onMount((): void => {
 		email = atob(EMAIL_B64);
@@ -23,9 +30,9 @@
 	{href}
 	rel="nofollow noopener"
 	aria-label="Email"
-	on:click={(e) => dispatch("click", e)}
+	{onclick}
 >
 	<MailIcon className="w-4 h-4" />
 	<span class="sr-only">{email || labelFallback}</span>
-	<slot />
+	{@render children?.()}
 </a>
