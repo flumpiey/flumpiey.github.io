@@ -1,0 +1,2 @@
+# Biome formats with LF; this stops core.autocrlf from checking files out with CRLF.
+* text=auto eol=lf

@@ -34,3 +34,6 @@ vite.config.ts.timestamp-*
 
 # Graphify knowledge-graph output (regenerable)
 graphify-out/
+
+# Generated reports and screenshots
+*-Output/
