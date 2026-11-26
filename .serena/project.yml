@@ -2,21 +2,22 @@
 project_name: "flumpiey.github.io"
 
 # list of language servers to start when using the LSP backend; choose from:
-#   ada                    al                     angular                ansible                bash
-#   bsl                    clojure                cpp                    cpp_ccls               crystal
-#   csharp                 csharp_omnisharp       cue                    dart                   deno
-#   elixir                 elm                    erlang                 fortran                fsharp
-#   gdscript               gleam                  go                     groovy                 haskell
-#   haxe                   hlsl                   html                   java                   json
-#   julia                  kotlin                 latex                  lean4                  lua
-#   luau                   markdown               matlab                 msl                    nextflow
-#   nix                    ocaml                  pascal                 perl                   php
-#   php_phpactor           php_phpantom           powershell             python                 python_basedpyright
-#   python_jedi            python_pyrefly         python_ty              qml                    r
-#   rego                   ruby                   ruby_solargraph        rust                   scala
-#   scss                   solidity               svelte                 swift                  systemverilog
-#   terraform              toml                   typescript             typescript_vts         vue
-#   wolfram                yaml                   zig
+#   ada                    al                     angular                ansible                astro
+#   bash                   bsl                    clojure                cpp                    cpp_ccls
+#   crystal                csharp                 csharp_omnisharp       cue                    dart
+#   deno                   elixir                 elm                    erlang                 fortran
+#   fsharp                 gdscript               gleam                  go                     groovy
+#   haskell                haxe                   hlsl                   html                   java
+#   json                   julia                  julia_fatou            kotlin                 latex
+#   lean4                  lua                    lua_emmylua            luau                   markdown
+#   matlab                 msl                    nextflow               nix                    ocaml
+#   pascal                 perl                   php                    php_devsense           php_phpactor
+#   php_phpantom           powershell             python                 python_basedpyright    python_jedi
+#   python_pyrefly         python_ty              qml                    r                      rego
+#   ruby                   ruby_solargraph        rust                   scala                  scss
+#   solidity               svelte                 swift                  systemverilog          terraform
+#   toml                   typescript             typescript_tsgo        typescript_vts         vue
+#   vbnet                  wolfram                yaml                   zig
 #   (This list may be outdated; generated with scripts/print_language_list.py;
 #   For the current list, see values of the LanguageServerId enum here:
 #   https://github.com/oraios/serena/blob/main/src/solidlsp/ls_config.py)
@@ -25,10 +26,13 @@ project_name: "flumpiey.github.io"
 #   - For C, use cpp
 #   - For JavaScript, use typescript
 #   - For Angular projects, use angular (subsumes typescript+html; requires `npm install` in the project root)
+#   - For Astro projects, use astro (subsumes typescript/javascript for .astro projects; requires npm)
 #   - For Svelte projects, use svelte (subsumes typescript/javascript for .svelte projects; requires npm)
 #   - For Deno projects, use deno (serves the same .ts/.js files as typescript; requires the deno CLI on PATH)
 #   - For SCSS / Sass / plain CSS, use scss (some-sass-language-server handles all three)
 #   - For Free Pascal/Lazarus, use pascal
+#   - External Python adapters may add further registered IDs; install the adapter package first
+#     and then use its ID here, for example: example
 # Special requirements:
 #   Some language servers require additional setup/installations.
 #   See here for details: https://oraios.github.io/serena/01-about/020_programming-languages.html#language-servers
@@ -117,12 +121,13 @@ ignored_paths:
 # Added on 2025-04-18
 read_only: false
 
-# list of tool names to exclude.
+# list of tool names (and tool markers) to exclude.
 # This extends the existing exclusions (e.g. from the global configuration)
 # Find the list of tools here: https://oraios.github.io/serena/01-about/035_tools.html
 excluded_tools: []
 
-# list of tools to include that would otherwise be disabled (particularly optional tools that are disabled by default).
+# list of tools (and tool markers) to include that would otherwise be disabled (particularly optional tools
+# that are disabled by default).
 # This extends the existing inclusions (e.g. from the global configuration).
 # Find the list of tools here: https://oraios.github.io/serena/01-about/035_tools.html
 included_optional_tools: []
@@ -150,13 +155,34 @@ added_modes:
 # initial prompt for the project. It will always be given to the LLM upon activating the project
 # (contrary to the memories, which are loaded on demand).
 initial_prompt: |
-  Personal portfolio site: SvelteKit 2, Svelte 4, TypeScript, Vite 5, Tailwind 3 and Skeleton 2.
-  It is prerendered with adapter-static into build/ and deployed to GitHub Pages on a push to main
-  (.github/workflows/jekyll-gh-pages.yml, which runs SvelteKit despite its name).
-  Page content, including the projects array, is in src/routes/+page.svelte.
-  Components and icons are in src/lib/. Static assets are in static/.
-  Use pnpm. Commands: pnpm dev, pnpm build, pnpm check. There is no test or lint script.
-  Commit messages follow Conventional Commits. lefthook runs commitlint in the commit-msg hook.
+  Personal portfolio and CV site for Dru Connold, in a public GitHub repository (flumpiey/flumpiey.github.io).
+  One prerendered page with no backend, database or API.
+
+  Stack: SvelteKit 2, Svelte 4 (not 5), TypeScript 5, Vite 5, Tailwind 3, Skeleton 2 (crimson theme),
+  vite-plugin-tailwind-purgecss, @floating-ui/dom and highlight.js.
+  It is prerendered with adapter-static into build/ (404.html fallback, served at the domain root) and
+  deployed to GitHub Pages on a push to main (.github/workflows/jekyll-gh-pages.yml, which runs
+  SvelteKit despite its name). CI uses Node 22 and pnpm 9.
+
+  Layout:
+  - src/routes/+page.svelte: all page content, including the projects array.
+  - src/routes/+layout.svelte: app shell, navigation, contact buttons and the global modal.
+  - src/lib/components and src/lib/icons: components and SVG icons.
+  - static/: CV PDF, portrait, project images and favicons.
+
+  Commands (use pnpm only): pnpm install --frozen-lockfile, pnpm dev, pnpm build, pnpm preview, pnpm check.
+  There is no test or lint script. biome.json does not load in Biome 2.2.4, so Biome is not a gate.
+  Before a task is done, run pnpm check and pnpm build.
+
+  Rules:
+  - A push to main deploys the live site. Work on a branch.
+  - Commit messages follow Conventional Commits with no AI attribution. lefthook runs commitlint in the
+    commit-msg hook, and pr-hygiene.yml checks pull requests. Never skip hooks.
+  - Keep the email address and Telegram handle base64-encoded in the contact link components.
+  - Do not commit secrets or private notes.
+  - orca.yaml runs the worktree setup.
+
+  Read the core memory first.
 
 # time budget (seconds) per tool call for the retrieval of additional symbol information
 # such as docstrings or parameter information.
@@ -175,3 +201,18 @@ read_only_memory_patterns: []
 # Extends the list from the global configuration, merging the two lists.
 # Example: ["_archive/.*", "_episodes/.*"]
 ignored_memory_patterns: []
+
+# list of APIs (facades or facade methods, e.g. "lsp" or "lsp.get_diagnostics_for_symbol") to include in the REPL
+# that would otherwise be disabled (particularly optional methods, which are disabled by default).
+# This extends the existing inclusions (e.g. from the global configuration).
+included_apis: []
+
+# list of APIs (facades or facade methods, e.g. "lsp" or "lsp.find_symbol") to exclude from the REPL.
+# Add "marker:editing" to exclude all editing functions.
+# This extends the existing exclusions (e.g. from the global configuration).
+excluded_apis: []
+
+# The interface through which the agent (LLM) accesses Serena's functionality (overrides the global setting).
+# Valid values: tools, REPL (see the global configuration for details); leave empty to use the global setting.
+# Note: the interface is fixed at startup. If a project is activated post-init, its setting is not applied.
+agent_interface:
