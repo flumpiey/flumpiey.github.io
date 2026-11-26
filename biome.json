@@ -17,7 +17,8 @@
 			"!**/build/**",
 			"!**/.svelte-kit/**",
 			"!**/static/**",
-			"!**/*.svelte"
+			"!**/*.svelte",
+			"!DESIGN.md"
 		]
 	},
 	"linter": {
