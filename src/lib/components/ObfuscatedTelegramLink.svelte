@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount, type Snippet } from "svelte";
+	import { TELEGRAM_USER_B64 } from "#lib/contact.ts";
 	import TelegramIcon from "#lib/icons/TelegramIcon.svelte";
 
 	let {
@@ -14,14 +15,11 @@
 		children?: Snippet;
 	} = $props();
 
-	// Use base64 to avoid username in HTML
-	const TG_USER_B64: string = "RFJVQlJVMDE="; // DRUBRU01
-
 	let username: string = $state("");
 	let href: string = $state("#");
 
 	onMount((): void => {
-		username = atob(TG_USER_B64);
+		username = atob(TELEGRAM_USER_B64);
 		href = `https://t.me/${username}`;
 	});
 </script>

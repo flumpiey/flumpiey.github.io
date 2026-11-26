@@ -1,14 +1,36 @@
 <!DOCTYPE html>
-<html lang="en" class="dark" data-theme="crimson">
+<html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" href="%sveltekit.assets%/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
+		<meta name="theme-color" content="#F5F0E8" media="(prefers-color-scheme: light)" />
+		<meta name="theme-color" content="#06004F" media="(prefers-color-scheme: dark)" />
+		<script>
+			// Applies the theme before first paint: stored choice, else the system. ThemeToggle keeps it in sync.
+			(() => {
+				var stored = null;
+				try {
+					stored = localStorage.getItem("theme");
+				} catch (error) {
+					console.warn("Theme preference unavailable:", error);
+				}
+				var dark = stored ? stored === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+				var root = document.documentElement;
+				root.classList.toggle("dark", dark);
+				root.classList.toggle("light", !dark);
+				document.querySelectorAll('meta[name="theme-color"]').forEach((meta) => {
+					meta.content = dark ? "#06004F" : "#F5F0E8";
+				});
+			})();
+		</script>
+		<!-- Without JavaScript the page follows the system theme; hide controls that cannot work. -->
+		<noscript><style>[data-requires-js] { display: none; }</style></noscript>
 		<title>Dru Connold — Full-Stack Developer</title>
 		<meta name="description" content="Full-stack developer & founder of MalvaDev. 10+ years experience building scalable web/mobile apps, cloud & DevOps, and leading projects end-to-end." />
 		%sveltekit.head%
 	</head>
 	<body data-sveltekit-preload-data="hover">
-		<div style="display: contents" class="min-h-screen overflow-auto">%sveltekit.body%</div>
+		<div style="display: contents">%sveltekit.body%</div>
 	</body>
 </html>

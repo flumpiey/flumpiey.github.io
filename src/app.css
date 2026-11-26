@@ -1,97 +1,301 @@
 @import "tailwindcss";
 @import "@skeletonlabs/skeleton";
-@import "@skeletonlabs/skeleton/themes/crimson";
 
 @plugin "@tailwindcss/forms";
 @plugin "@tailwindcss/typography";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* The design depends on the Skeleton 2 crimson palette, type and radius; Skeleton 5 ships other values. */
-[data-theme="crimson"] {
-	--color-surface-50: rgb(223 224 226);
-	--color-surface-100: rgb(213 213 217);
-	--color-surface-200: rgb(202 203 207);
-	--color-surface-300: rgb(170 171 179);
-	--color-surface-400: rgb(107 109 121);
-	--color-surface-500: rgb(43 46 64);
-	--color-surface-600: rgb(39 41 58);
-	--color-surface-700: rgb(32 35 48);
-	--color-surface-800: rgb(26 28 38);
-	--color-surface-900: rgb(21 23 31);
-	--color-surface-950: rgb(21 23 31);
-	--color-primary-500: rgb(212 22 60);
-	--radius-base: 24px;
-	--radius-container: 24px;
-	--text-scaling: 1;
-	--typo-base--font-family:
-		Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-		"Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-		"Segoe UI Symbol", "Noto Color Emoji";
+/*
+ * Swiss redesign tokens. Each colour follows `color-scheme` through `light-dark()`,
+ * so the theme also follows the system without JavaScript. Use the tokens, not `dark:`.
+ */
+@theme {
+	--color-paper: light-dark(#f5f0e8, #06004f);
+	--color-surface: light-dark(#eae4d8, #110a62);
+	--color-ink: light-dark(#06004f, #f5f0e8);
+	--color-ink-muted: light-dark(#3a3578, #cccce0);
+	--color-rule: light-dark(rgb(6 0 79 / 0.25), rgb(245 240 232 / 0.22));
+	--color-block: light-dark(#06004f, #030030);
+	--color-on-block: #f5f0e8;
+	/* Accent: lime fields always carry navy text. Lime never carries text on the light page. */
+	/* The `red` names are historic: they are the accent roles. */
+	--color-red: light-dark(#06004f, #f2ff26);
+	--color-red-solid: #f2ff26;
+	--color-red-text: light-dark(#202d85, #f2ff26);
+	--color-on-red: #06004f;
+	--color-mark: light-dark(#f2ff26, transparent);
+	/* The brief bans pure white. */
+	--color-white: initial;
+
+	--font-sans: "Archivo Variable", ui-sans-serif, system-ui, sans-serif;
+
+	--header-height: 4rem;
+	--gutter: clamp(1rem, 2.5vw, 2rem);
+	--content-max: 90rem;
 }
 
 @layer base {
-	html,
-	body {
-		@apply min-h-screen overflow-auto;
-	}
-
-	/* Smooth anchor scrolling with offset handled via scroll-mt-* on sections */
-	html {
-		@apply scroll-smooth;
-	}
-
-	/* `:root` outranks the Skeleton 5 defaults for both properties. */
+	/* Base stays `light dark` so the page follows the system when no class is set. */
 	:root {
-		scrollbar-color: rgb(255 255 255 / 0.1) rgb(0 0 0 / 0.05);
-		-webkit-tap-highlight-color: rgb(128 128 128 / 0.5);
-	}
-
-	body {
-		font-size: 1rem;
-		line-height: 1.5rem;
-	}
-
-	::selection {
-		background-color: color-mix(
-			in srgb,
-			var(--color-primary-500) 30%,
+		color-scheme: light dark;
+		scrollbar-width: auto;
+		scrollbar-color: var(--color-ink-muted) var(--color-surface);
+		-webkit-tap-highlight-color: color-mix(
+			in oklab,
+			var(--color-red) 30%,
 			transparent
 		);
 	}
+
+	:root.light {
+		color-scheme: light;
+	}
+
+	:root.dark {
+		color-scheme: dark;
+	}
+
+	html {
+		background-color: var(--color-paper);
+		/* Replaces CanvasText, which is pure white in dark mode. */
+		color: var(--color-ink);
+		scroll-padding-top: var(--header-height);
+	}
+
+	/* The project dialog scrolls on its own; stop a second page scrollbar beside it. */
+	html:has(dialog[open]) {
+		overflow: hidden;
+	}
+
+	@media (prefers-reduced-motion: no-preference) {
+		html {
+			scroll-behavior: smooth;
+		}
+	}
+
+	body {
+		min-height: 100dvh;
+		background-color: var(--color-paper);
+		color: var(--color-ink);
+		font-family: var(--font-sans);
+		font-size: 1rem;
+		font-weight: 400;
+		font-stretch: 100%;
+		line-height: 1.6;
+	}
+
+	::selection {
+		background-color: var(--color-red-solid);
+		color: var(--color-on-red);
+	}
+
+	/* currentColor contrasts with every field: paper, block and red. */
+	:focus-visible {
+		outline: 2px solid currentColor;
+		outline-offset: 3px;
+	}
 }
 
-/* Keeps the compact pill button of the previous theme. Sized for `btn btn-sm`, the only size in use. */
-@utility btn {
+/* Unlayered, so it beats every layered transition without !important. */
+@media (prefers-reduced-motion: reduce) {
+	*,
+	::before,
+	::after {
+		animation-duration: 0.01ms;
+		animation-iteration-count: 1;
+		transition-duration: 0.01ms;
+	}
+}
+
+/* Type roles --- */
+
+@utility type-display {
+	font-size: clamp(4rem, 15vw, 10rem);
+	font-weight: 900;
+	font-stretch: 62%;
+	line-height: 0.85;
+	letter-spacing: -0.03em;
+	text-transform: uppercase;
+	text-wrap: balance;
+}
+
+@utility type-heading {
+	font-size: clamp(2.5rem, 7vw, 5rem);
+	font-weight: 800;
+	font-stretch: 68%;
+	line-height: 0.9;
+	letter-spacing: -0.02em;
+	text-transform: uppercase;
+	text-wrap: balance;
+}
+
+@utility type-subheading {
+	font-size: clamp(1.5rem, 3vw, 2rem);
+	font-weight: 800;
+	font-stretch: 75%;
+	line-height: 1;
+	letter-spacing: -0.01em;
+	text-transform: uppercase;
+	text-wrap: balance;
+}
+
+@utility type-stat {
+	font-size: clamp(4rem, 12vw, 8rem);
+	font-weight: 900;
+	font-stretch: 62%;
+	line-height: 0.85;
+	letter-spacing: -0.03em;
+	font-variant-numeric: tabular-nums;
+}
+
+@utility type-body {
+	font-size: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+	font-weight: 400;
+	font-stretch: 100%;
+	line-height: 1.6;
+	max-width: 70ch;
+	text-wrap: pretty;
+}
+
+@utility type-ui {
+	font-size: 0.875rem;
+	font-weight: 700;
+	font-stretch: 100%;
+	line-height: 1.25;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+}
+
+/* Grid --- */
+
+@utility page-container {
+	width: 100%;
+	max-width: var(--content-max);
+	margin-inline: auto;
+	padding-inline: var(--gutter);
+}
+
+/* 4 columns, 6 from 640px, 12 from 1024px. */
+@utility swiss-grid {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	column-gap: var(--gutter);
+
+	@media (width >= 40rem) {
+		grid-template-columns: repeat(6, minmax(0, 1fr));
+	}
+
+	@media (width >= 64rem) {
+		grid-template-columns: repeat(12, minmax(0, 1fr));
+	}
+}
+
+/* Buttons: rectangles, at least 44px high, with a drawn arrow icon as a child. */
+
+@utility button-base {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.75rem;
+	min-height: 2.75rem;
+	padding: 0.625rem 1.25rem;
+	border: 1px solid transparent;
+	border-radius: 0;
 	cursor: pointer;
-	padding: --spacing(1.5) --spacing(3);
-	line-height: --spacing(5);
+	font-size: 0.875rem;
+	font-weight: 700;
+	line-height: 1.25;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+	text-decoration: none;
+	transition:
+		background-color 150ms ease-out,
+		color 150ms ease-out,
+		border-color 150ms ease-out;
 
 	& > :where(svg) {
-		width: --spacing(4);
-		height: --spacing(4);
+		width: 1.125rem;
+		height: 1.125rem;
+		flex-shrink: 0;
+		transition: translate 150ms ease-out;
+	}
+
+	&:hover:not(:disabled) > :where(svg) {
+		translate: 0.25rem 0;
 	}
 
 	&:disabled {
 		cursor: not-allowed;
-		opacity: 0.5;
-	}
-
-	&:hover:not(:disabled) {
-		filter: brightness(115%);
-	}
-
-	&:active:not(:disabled) {
-		scale: 0.95;
-		filter: brightness(90%);
+		opacity: 0.55;
 	}
 }
 
-@utility preset-ghost-surface {
-	background-color: color-mix(
-		in srgb,
-		var(--color-surface-500) 20%,
-		transparent
-	);
-	box-shadow: inset 0 0 0 1px var(--color-surface-500);
+@utility button-primary {
+	@apply button-base;
+	background-color: var(--color-red-solid);
+	/* The lime fill needs a navy edge on the light page. */
+	border-color: var(--color-red);
+	color: var(--color-on-red);
+
+	&:hover:not(:disabled) {
+		background-color: var(--color-ink);
+		border-color: var(--color-ink);
+		color: var(--color-paper);
+	}
+}
+
+@utility button-secondary {
+	@apply button-base;
+	background-color: transparent;
+	border-color: currentColor;
+	color: inherit;
+
+	&:hover:not(:disabled) {
+		background-color: var(--color-ink);
+		border-color: var(--color-ink);
+		color: var(--color-paper);
+	}
+}
+
+/* Square icon-only control for the header (theme toggle, menu). Give it an accessible name. */
+@utility button-icon {
+	@apply button-base;
+	padding: 0;
+	width: 2.75rem;
+	color: inherit;
+
+	&:hover:not(:disabled) {
+		border-color: currentColor;
+	}
+
+	&:hover:not(:disabled) > :where(svg) {
+		translate: none;
+	}
+}
+
+/* Maps `prose` colours to the tokens in both themes; use as `prose prose-theme`. */
+@utility prose-theme {
+	--tw-prose-body: var(--color-ink);
+	--tw-prose-headings: var(--color-ink);
+	--tw-prose-lead: var(--color-ink-muted);
+	--tw-prose-links: var(--color-red-text);
+	--tw-prose-bold: var(--color-ink);
+	--tw-prose-counters: var(--color-ink-muted);
+	--tw-prose-bullets: var(--color-ink-muted);
+	--tw-prose-hr: var(--color-rule);
+	--tw-prose-quotes: var(--color-ink);
+	--tw-prose-quote-borders: var(--color-rule);
+	--tw-prose-captions: var(--color-ink-muted);
+	--tw-prose-code: var(--color-ink);
+	--tw-prose-th-borders: var(--color-rule);
+	--tw-prose-td-borders: var(--color-rule);
+
+	/* Dialog subheads use the condensed uppercase voice of the page, not the plugin default. */
+	& h3 {
+		font-weight: 800;
+		font-stretch: 75%;
+		letter-spacing: -0.01em;
+		text-transform: uppercase;
+	}
 }

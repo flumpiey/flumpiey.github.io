@@ -1,0 +1,4 @@
+{
+  "prompt": "Origin: pre-existing photograph static/AlexanderSmith_D&G-97.jpg (portrait of Dru Connold). Background removed with rembg using the u2net_human_seg model; exported as transparent WebP. Not generated.",
+  "createdAt": "2026-11-26T14:11:02.800Z"
+}

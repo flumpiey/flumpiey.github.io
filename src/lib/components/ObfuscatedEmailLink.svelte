@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount, type Snippet } from "svelte";
+	import { EMAIL_B64 } from "#lib/contact.ts";
 	import MailIcon from "#lib/icons/MailIcon.svelte";
 
 	let {
@@ -13,8 +14,6 @@
 		onclick?: () => void;
 		children?: Snippet;
 	} = $props();
-
-	const EMAIL_B64: string = "ZHJ1QG1hbHZhZGV2LmNvbQ=="; // dru@malvadev.com
 
 	let email: string = $state("");
 	let href: string = $state("#");
