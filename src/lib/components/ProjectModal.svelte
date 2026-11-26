@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { tick } from "svelte";
+	import { trapTab } from "#lib/trap-tab.ts";
 
 	interface Project {
 		title: string;
@@ -41,6 +42,8 @@
 	data-backdrop
 	aria-labelledby="project-dialog-title"
 	class="group dialog dialog-fullscreen animate-dialog [--anim-duration:150ms] overflow-y-auto bg-surface-900/70 text-inherit backdrop-blur-xs motion-reduce:transition-none"
+	onkeydown={(event) =>
+		trapTab(event, [...dialog.querySelectorAll<HTMLElement>("a[href], button")], document.activeElement)}
 	onpointerdown={(event) => (pressedOnBackdrop = isBackdrop(event.target))}
 	onclick={(event) => {
 		if (pressedOnBackdrop && isBackdrop(event.target)) dialog.close();
