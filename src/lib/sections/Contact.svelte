@@ -5,6 +5,7 @@
 	import DownloadIcon from "#lib/icons/DownloadIcon.svelte";
 	import GithubIcon from "#lib/icons/GithubIcon.svelte";
 	import LinkedInIcon from "#lib/icons/LinkedInIcon.svelte";
+	import MalvaDevIcon from "#lib/icons/MalvaDevIcon.svelte";
 
 	const row =
 		"type-ui flex min-h-14 items-center gap-4 border-b border-on-red/40 px-1 py-3 transition-colors duration-150 ease-out hover:bg-on-red hover:text-red-solid [&>svg]:shrink-0";
@@ -30,6 +31,7 @@
 			</li>
 			<li>
 				<a class={row} href="https://malvadev.com" target="_blank" rel="noreferrer">
+					<MalvaDevIcon className="h-4 w-4" />
 					Malva Dev
 					<ArrowIcon className="ml-auto h-4 w-4" />
 				</a>
