@@ -1,25 +1,27 @@
 ---
 name: Dru Connold Portfolio
-description: A modern Swiss poster for a developer who rescues failed builds, in off white, black and signal red.
+description: A modern Swiss poster for a developer who rescues failed builds, in ink navy, poster cream and signal lime.
 colors:
-  paper: "#F1EDE4"
-  paper-dark: "#0F0F0E"
-  surface: "#E6E0D3"
-  surface-dark: "#1A1917"
-  ink: "#111110"
-  ink-dark: "#EDE8DE"
-  ink-muted: "#4A4640"
-  ink-muted-dark: "#B9B4AA"
-  rule: "rgb(17 17 16 / 0.25)"
-  rule-dark: "rgb(237 232 222 / 0.22)"
-  block: "#111110"
-  block-dark: "#1A1917"
-  on-block: "#EDE8DE"
-  poster-red: "#E4232B"
-  red-solid: "#C8141F"
-  red-text: "#B5121C"
-  red-text-dark: "#FF5A5F"
-  on-red: "#F6F1E8"
+  paper: "#F5F0E8"
+  paper-dark: "#06004F"
+  surface: "#EAE4D8"
+  surface-dark: "#110A62"
+  ink: "#06004F"
+  ink-dark: "#F5F0E8"
+  ink-muted: "#3A3578"
+  ink-muted-dark: "#CCCCE0"
+  rule: "rgb(6 0 79 / 0.25)"
+  rule-dark: "rgb(245 240 232 / 0.22)"
+  block: "#06004F"
+  block-dark: "#030030"
+  on-block: "#F5F0E8"
+  red: "#06004F"
+  red-dark: "#F2FF26"
+  red-solid: "#F2FF26"
+  red-text: "#202D85"
+  red-text-dark: "#F2FF26"
+  on-red: "#06004F"
+  mark: "#F2FF26"
 typography:
   display:
     fontFamily: "Archivo Variable, ui-sans-serif, system-ui, sans-serif"
@@ -111,45 +113,50 @@ components:
 
 **Creative North Star: "The Rescue Poster"**
 
-The page reads as a modern Swiss poster for a developer who rescues failed builds. A strict grid, huge condensed grotesque type and flat fields of off white, black and signal red carry it. Every section is a full-width field, and visible hairline rules mark the columns and rows inside it.
+The page reads as a modern Swiss poster for a developer who rescues failed builds. A strict grid, huge condensed grotesque type and flat fields of poster cream, ink navy and signal lime carry it. Every section is a full-width field, and visible hairline rules mark the columns and rows inside it.
 
-The system is flat and typographic. Hierarchy comes from scale and weight, never from shadow, gradient or glass. One black-and-white portrait cutout stands in front of a solid red rectangle and is the only picture outside the project screenshots. The page refuses the dark sidebar CV with pill buttons that it replaced.
+The system is flat and typographic. Hierarchy comes from scale and weight, never from shadow, gradient or glass. One black-and-white portrait cutout stands in front of a solid lime rectangle and is the only picture outside the project screenshots. The page refuses the dark sidebar CV with pill buttons that it replaced.
 
-There are two themes, light and dark, with the same structure. Neither theme uses pure white: the light page is a warm off white, and the dark page is a near black with warm off-white text.
+There are two themes, light and dark, with the same structure. Neither theme uses pure white: the light page is a warm cream with navy ink, and the dark page is ink navy with cream text.
 
 **Key Characteristics:**
 
 - Flush-left 12-column grid with visible 1px rules.
 - Condensed uppercase display type at poster scale.
-- Full-width fields that alternate paper, black block and red.
+- Full-width fields that alternate paper, navy block and lime.
 - Square corners everywhere; no shadows, gradients or glass.
 - Light and dark themes, with no pure white in either.
 
 ## Colors
 
-A three-colour poster palette: warm off white, near black and one signal red, with a darker red for small text.
+A three-colour poster palette: poster cream, ink navy and one signal lime, with a link blue for small links on the light page.
+
+The token names that start with `red` are historic. They hold the accent roles, and `src/app.css` keeps the names so that the components do not change.
 
 ### Primary
 
-- **Poster Red** (`poster-red`): large red fields (the hero rectangle) and display type of 24px or larger, such as "CONNOLD." in the hero name.
-- **Signal Red Solid** (`red-solid`): fields and buttons that carry small text: the primary button, the Stats band and the Contact band. On Red text on it measures 5.22:1.
-- **Red Text** (`red-text`, `red-text-dark`): small red text on paper or surface, such as prose links in the project dialog.
+- **Signal Lime** (`red-solid`): the accent fields: the hero rectangle behind the portrait, the primary button, the Stats band and the Contact band. Navy text on it measures 17.05:1.
+- **Accent** (`red`, `red-dark`): Ink Navy on the light page and Signal Lime on the dark page. It colours "CONNOLD." in the hero name and the edge of the primary button.
+- **Highlighter Mark** (`mark`): a lime field behind "CONNOLD." on the light page only. It is transparent on the dark page, where the name itself is lime.
+- **Link** (`red-text`, `red-text-dark`): Link Blue on the light page (10.43:1 on paper, 9.34:1 on surface) and Signal Lime on the dark page. Use it for prose links, such as the links in the project dialog and on the CV.
 
 ### Neutral
 
-- **Paper** (`paper`, `paper-dark`): the page field in each theme.
-- **Surface** (`surface`, `surface-dark`): alternate fields, image placeholders and the scrollbar track.
-- **Ink** (`ink`, `ink-dark`): all body text and headings on paper.
-- **Ink Muted** (`ink-muted`, `ink-muted-dark`): secondary text such as the location line and project summaries.
-- **Rule** (`rule`, `rule-dark`): 1px hairlines between columns and rows, and the edge of black blocks in the dark theme.
-- **Block** (`block`, `block-dark`) with **On Block** (`on-block`): the black fields for Skills, Experience and the footer.
-- **On Red** (`on-red`): text and rules on the red bands.
+- **Paper** (`paper`, `paper-dark`): the page field in each theme: Poster Cream on light, Ink Navy on dark.
+- **Surface** (`surface`, `surface-dark`): alternate fields, image placeholders and the scrollbar track: Cream Surface on light, Surface Navy on dark.
+- **Ink** (`ink`, `ink-dark`): all body text and headings on paper (16.52:1 in both themes).
+- **Ink Muted** (`ink-muted`, `ink-muted-dark`): secondary text such as the location line and project summaries (9.44:1 on light, 11.85:1 on dark).
+- **Rule** (`rule`, `rule-dark`): 1px hairlines between columns and rows, and the edge of navy blocks in the dark theme.
+- **Block** (`block`, `block-dark`) with **On Block** (`on-block`): the navy fields for Skills, Experience and the footer. On the dark page the block is Deep Navy (17.69:1 with cream text).
+- **On Red** (`on-red`): Ink Navy text and rules on the lime bands.
 
 ### Named Rules
 
 **The No White Rule.** Never use #FFFFFF or a `white` utility. The Tailwind `white` colour is unset in `src/app.css`, and the root text colour is Ink, so no browser default falls back to white.
 
-**The Red Size Rule.** Poster Red is for fields and for text of 24px or larger. Text under 24px on red uses the Red Solid field; small red text on paper uses Red Text.
+**The Lime Carries Navy Rule.** A lime field always carries Ink Navy text. Never put lime text on the light page: lime on cream measures 1.03:1. Lime text appears only on the dark page, through the `red` and `red-text` tokens.
+
+**The Lime Edge Rule.** A lime fill on the light page needs a navy edge, because lime and cream are close in tone. The primary button carries a 1px border in the `red` token.
 
 **The Token Rule.** Colours live once in `src/app.css` as `light-dark()` theme variables. Use the token utilities (`bg-paper`, `text-ink`, `border-rule`), not `dark:` variants.
 
@@ -179,15 +186,17 @@ A three-colour poster palette: warm off white, near black and one signal red, wi
 
 The grid has 4 columns below 640px, 6 from 640px and 12 from 1024px, with a fluid gutter of clamp(1rem, 2.5vw, 2rem). Content is flush left inside a 90rem container. Sections use 4rem of vertical padding, and 6rem from the large breakpoints.
 
-Section order is fixed: Hero, Profile Summary, Stats (red), Core Skills (black), Projects, Professional Experience (black), Education with Certifications and Interests, Contact (red), and the footer (black).
+Section order is fixed: Hero, Profile Summary, Stats (lime), Core Skills (navy), Projects, Professional Experience (navy), Education with Certifications and Interests, Contact (lime), and the footer (navy).
 
-The hero splits 7 and 5 columns from 1024px: the name and actions on the left, the portrait on a red rectangle on the right. Below 1024px the portrait stacks under the actions, and the primary action stays in the first viewport at 390x844. On short landscape screens (30rem high or less) the hero tightens its type and spacing so the primary action stays visible at 844x390.
+The hero splits 7 and 5 columns from 1024px: the name and actions on the left, the portrait on a lime rectangle on the right. Below 1024px the portrait stacks under the actions, and the primary action stays in the first viewport at 390x844. On short landscape screens (30rem high or less) the hero tightens its type and spacing so the primary action stays visible at 844x390.
 
 A fixed 4rem header holds the DC mark, the section links (from 1024px), the theme toggle, the Contact button (from 640px) and the menu button (below 1024px).
 
+The CV page (`/cv`) is an A4-width sheet (210mm) that is always in the light theme, on screen and on paper. It repeats the light token values locally, because the build lowers `light-dark()` to the root.
+
 ## Elevation & Depth
 
-The system is flat. There are no shadows, gradients, blurs or glass. Depth comes from the change of field colour between sections and from 1px rules. In the dark theme, the black blocks carry a top and bottom rule, because the block and the page are close in tone.
+The system is flat. There are no shadows, gradients, blurs or glass. Depth comes from the change of field colour between sections and from 1px rules. In the dark theme, the navy blocks carry a top and bottom rule, because the block and the page are close in tone.
 
 ### Named Rules
 
@@ -202,11 +211,11 @@ Every corner is square (0px). Buttons, cards, the dialog and image frames are re
 ### Buttons
 
 - **Shape:** rectangle, square corners (0px), at least 44px high, uppercase label type, with a drawn arrow or download icon at the end.
-- **Primary:** Red Solid fill with On Red text (10px 20px padding). Hover turns the fill to Ink and the text to Paper, and the arrow moves 4px to the right in 150ms.
+- **Primary:** Signal Lime fill with Ink Navy text (10px 20px padding) and a 1px edge in the accent colour. Hover turns the fill to Ink and the text to Paper, and the arrow moves 4px to the right in 150ms.
 - **Secondary:** transparent with a 1px border in the current text colour. Hover fills with Ink.
 - **Icon:** a 44px square for the theme toggle and the menu, with a 1px border on hover. Each has an accessible name that states its action.
 - **Disabled:** 55% opacity and a not-allowed cursor.
-- **Focus:** a 2px outline in the current text colour with a 3px offset, so it contrasts on paper, black and red fields.
+- **Focus:** a 2px outline in the current text colour with a 3px offset, so it contrasts on paper, navy and lime fields.
 
 ### Project Cells
 
@@ -228,11 +237,11 @@ A full-screen dialog on Paper with a sticky ruled top bar (link and Close). The 
 
 ### Contact Rows
 
-Full-width ruled rows on the Red Solid band, each at least 56px high, with an icon, a visible label and an arrow. Hover inverts to On Red fill with Red Solid text. Email and Telegram use the obfuscated link components, so neither address appears in the markup.
+Full-width ruled rows on the Signal Lime band, each at least 56px high, with an icon, a visible label and an arrow. Hover inverts to an Ink Navy fill with Signal Lime text. Email and Telegram use the obfuscated link components, so neither address appears in the markup.
 
 ### Theme Toggle
 
-An inline script in `src/app.html` sets `.dark` or `.light` on `<html>` before first paint: stored choice, else the system preference. The toggle follows system changes while no choice is stored, clears the stored choice when the user picks the system theme, updates `meta[name="theme-color"]`, and keeps working when localStorage is blocked.
+An inline script in `src/app.html` sets `.dark` or `.light` on `<html>` before first paint: stored choice, else the system preference. The toggle follows system changes while no choice is stored, clears the stored choice when the user picks the system theme, updates `meta[name="theme-color"]` (#F5F0E8 on light, #06004F on dark), and keeps working when localStorage is blocked.
 
 ## Do's and Don'ts
 
@@ -240,14 +249,16 @@ An inline script in `src/app.html` sets `.dark` or `.light` on `<html>` before f
 
 - **Do** use the colour tokens from `src/app.css` by name in both themes.
 - **Do** keep every corner square (0px) and every rule 1px.
-- **Do** keep text under 24px off Poster Red; use Red Solid for small text on red.
+- **Do** put Ink Navy text on every lime field.
+- **Do** give a lime fill on the light page a navy edge.
 - **Do** keep targets at least 44px high and the focus outline visible on every field.
-- **Do** keep the one authored motion, the hero red field rising (900ms), and keep state changes at 150ms; honour prefers-reduced-motion.
+- **Do** keep the one authored motion, the hero lime field rising (900ms), and keep state changes at 150ms; honour prefers-reduced-motion.
 - **Do** theme the browser surfaces: selection, focus ring, scrollbar and `color-scheme`.
 
 ### Don't:
 
 - **Don't** use #FFFFFF or a `white` utility anywhere.
+- **Don't** put lime text on the light page.
 - **Don't** add shadows, gradients, glass or rounded corners.
 - **Don't** add eyebrow labels, decorative numbers, distress textures, barcodes or filler symbols.
 - **Don't** use the sunburst or rising sun motifs of the colour reference image.
