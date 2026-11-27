@@ -14,7 +14,7 @@
 			</h1>
 
 			<div class="mt-8 grid border-y border-rule sm:grid-cols-2 sm:divide-x sm:divide-rule">
-				<p class="type-ui py-3 text-balance sm:pr-4">Full-Stack Developer & Founder of Malva Dev</p>
+				<p class="type-ui py-3 text-balance sm:pr-4">Full-Stack Developer & Founder of <a class="underline underline-offset-4" href="https://malvadev.com" target="_blank" rel="noreferrer">Malva Dev</a></p>
 				<p class="type-ui border-t border-rule py-3 text-ink-muted sm:border-t-0 sm:pl-4">
 					Randburg, Gauteng, South Africa
 				</p>

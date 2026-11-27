@@ -65,6 +65,8 @@
 					<dd>{#if telegram}<a href="https://t.me/{telegram}">{telegram}</a>{/if}</dd>
 					<dt>Web</dt>
 					<dd><a href="https://flumpiey.github.io">flumpiey.github.io</a></dd>
+					<dt>Company</dt>
+					<dd><a href="https://malvadev.com">malvadev.com</a></dd>
 					<dt>GitHub</dt>
 					<dd><a href="https://github.com/flumpiey">github.com/flumpiey</a></dd>
 					<dt>LinkedIn</dt>

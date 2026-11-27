@@ -29,6 +29,12 @@
 				>
 			</li>
 			<li>
+				<a class={row} href="https://malvadev.com" target="_blank" rel="noreferrer">
+					Malva Dev
+					<ArrowIcon className="ml-auto h-4 w-4" />
+				</a>
+			</li>
+			<li>
 				<a class={row} href="https://linkedin.com/in/dru-connold" target="_blank" rel="noreferrer">
 					<LinkedInIcon className="h-4 w-4" />
 					LinkedIn

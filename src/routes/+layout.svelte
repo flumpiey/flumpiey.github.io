@@ -94,7 +94,7 @@
 
 <footer class="bg-block text-on-block print:hidden">
 	<div class="page-container flex flex-wrap items-center justify-between gap-x-6 gap-y-2 py-4">
-		<p class="type-ui">© {year} Dru Connold, Malva Dev</p>
+		<p class="type-ui">© {year} Dru Connold, <a class="hover:underline underline-offset-4" href="https://malvadev.com" target="_blank" rel="noreferrer">Malva Dev</a></p>
 		<a class="type-ui inline-flex min-h-11 items-center gap-2 hover:underline underline-offset-4" href="#top"
 			>Back to top <ArrowIcon className="h-4 w-4 -rotate-90" /></a
 		>
