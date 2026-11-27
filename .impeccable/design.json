@@ -1,274 +1,288 @@
 {
 	"schemaVersion": 2,
-	"generatedAt": "2026-11-26T14:10:50.767Z",
+	"generatedAt": "2026-11-27T13:34:45.318Z",
 	"title": "Design System: Dru Connold Portfolio",
 	"extensions": {
 		"colorMeta": {
 			"paper": {
 				"role": "neutral",
-				"displayName": "Warm Off-White Paper",
-				"canonical": "#F1EDE4",
-				"oklch": "oklch(94.7% 0.013 86.8)",
+				"displayName": "Poster Cream",
+				"canonical": "#F5F0E8",
 				"tonalRamp": [
-					"oklch(15.0% 0.002 86.8)",
-					"oklch(26.4% 0.005 86.8)",
-					"oklch(37.9% 0.009 86.8)",
-					"oklch(49.3% 0.013 86.8)",
-					"oklch(60.7% 0.013 86.8)",
-					"oklch(72.1% 0.009 86.8)",
-					"oklch(83.6% 0.005 86.8)",
-					"oklch(95.0% 0.002 86.8)"
+					"#4A4846",
+					"#7B7874",
+					"#ACA8A2",
+					"#F5F0E8",
+					"#F8F5EF",
+					"#FAF8F4",
+					"#FCFBF8",
+					"#FEFDFC"
 				]
 			},
 			"paper-dark": {
 				"role": "neutral",
-				"displayName": "Night Paper",
-				"canonical": "#0F0F0E",
-				"oklch": "oklch(16.8% 0.002 106.6)",
+				"displayName": "Ink Navy Page",
+				"canonical": "#06004F",
 				"tonalRamp": [
-					"oklch(15.0% 0.000 106.6)",
-					"oklch(26.4% 0.001 106.6)",
-					"oklch(37.9% 0.001 106.6)",
-					"oklch(49.3% 0.002 106.6)",
-					"oklch(60.7% 0.002 106.6)",
-					"oklch(72.1% 0.001 106.6)",
-					"oklch(83.6% 0.001 106.6)",
-					"oklch(95.0% 0.000 106.6)"
+					"#020018",
+					"#030028",
+					"#040037",
+					"#06004F",
+					"#514D84",
+					"#8380A7",
+					"#B4B3CA",
+					"#E1E0EA"
 				]
 			},
 			"surface": {
 				"role": "neutral",
-				"displayName": "Stone Surface",
-				"canonical": "#E6E0D3",
-				"oklch": "oklch(90.8% 0.019 86.2)",
+				"displayName": "Cream Surface",
+				"canonical": "#EAE4D8",
 				"tonalRamp": [
-					"oklch(15.0% 0.003 86.2)",
-					"oklch(26.4% 0.008 86.2)",
-					"oklch(37.9% 0.013 86.2)",
-					"oklch(49.3% 0.018 86.2)",
-					"oklch(60.7% 0.018 86.2)",
-					"oklch(72.1% 0.013 86.2)",
-					"oklch(83.6% 0.008 86.2)",
-					"oklch(95.0% 0.003 86.2)"
+					"#464441",
+					"#75726C",
+					"#A4A097",
+					"#EAE4D8",
+					"#F0ECE4",
+					"#F5F2EC",
+					"#F9F7F3",
+					"#FCFCFA"
 				]
 			},
 			"surface-dark": {
 				"role": "neutral",
-				"displayName": "Charcoal Surface",
-				"canonical": "#1A1917",
-				"oklch": "oklch(21.4% 0.004 84.6)",
+				"displayName": "Surface Navy",
+				"canonical": "#110A62",
 				"tonalRamp": [
-					"oklch(15.0% 0.001 84.6)",
-					"oklch(26.4% 0.002 84.6)",
-					"oklch(37.9% 0.003 84.6)",
-					"oklch(49.3% 0.004 84.6)",
-					"oklch(60.7% 0.004 84.6)",
-					"oklch(72.1% 0.003 84.6)",
-					"oklch(83.6% 0.002 84.6)",
-					"oklch(95.0% 0.001 84.6)"
+					"#05031D",
+					"#090531",
+					"#0C0745",
+					"#110A62",
+					"#585491",
+					"#8885B1",
+					"#B8B6D0",
+					"#E2E2EC"
 				]
 			},
 			"ink": {
 				"role": "neutral",
-				"displayName": "Poster Ink",
-				"canonical": "#111110",
-				"oklch": "oklch(17.7% 0.002 106.6)",
+				"displayName": "Ink Navy",
+				"canonical": "#06004F",
 				"tonalRamp": [
-					"oklch(15.0% 0.000 106.6)",
-					"oklch(26.4% 0.001 106.6)",
-					"oklch(37.9% 0.001 106.6)",
-					"oklch(49.3% 0.002 106.6)",
-					"oklch(60.7% 0.002 106.6)",
-					"oklch(72.1% 0.001 106.6)",
-					"oklch(83.6% 0.001 106.6)",
-					"oklch(95.0% 0.000 106.6)"
+					"#020018",
+					"#030028",
+					"#040037",
+					"#06004F",
+					"#514D84",
+					"#8380A7",
+					"#B4B3CA",
+					"#E1E0EA"
 				]
 			},
 			"ink-dark": {
 				"role": "neutral",
-				"displayName": "Bone Ink",
-				"canonical": "#EDE8DE",
-				"oklch": "oklch(93.2% 0.014 84.6)",
+				"displayName": "Cream Ink",
+				"canonical": "#F5F0E8",
 				"tonalRamp": [
-					"oklch(15.0% 0.002 84.6)",
-					"oklch(26.4% 0.006 84.6)",
-					"oklch(37.9% 0.010 84.6)",
-					"oklch(49.3% 0.014 84.6)",
-					"oklch(60.7% 0.014 84.6)",
-					"oklch(72.1% 0.010 84.6)",
-					"oklch(83.6% 0.006 84.6)",
-					"oklch(95.0% 0.002 84.6)"
+					"#4A4846",
+					"#7B7874",
+					"#ACA8A2",
+					"#F5F0E8",
+					"#F8F5EF",
+					"#FAF8F4",
+					"#FCFBF8",
+					"#FEFDFC"
 				]
 			},
 			"ink-muted": {
 				"role": "neutral",
-				"displayName": "Graphite Muted",
-				"canonical": "#4A4640",
-				"oklch": "oklch(39.6% 0.011 78.2)",
+				"displayName": "Muted Ink",
+				"canonical": "#3A3578",
 				"tonalRamp": [
-					"oklch(15.0% 0.002 78.2)",
-					"oklch(26.4% 0.005 78.2)",
-					"oklch(37.9% 0.008 78.2)",
-					"oklch(49.3% 0.011 78.2)",
-					"oklch(60.7% 0.011 78.2)",
-					"oklch(72.1% 0.008 78.2)",
-					"oklch(83.6% 0.005 78.2)",
-					"oklch(95.0% 0.002 78.2)"
+					"#111024",
+					"#1D1B3C",
+					"#292554",
+					"#3A3578",
+					"#7572A1",
+					"#9D9ABC",
+					"#C4C2D7",
+					"#E7E7EF"
 				]
 			},
 			"ink-muted-dark": {
 				"role": "neutral",
-				"displayName": "Ash Muted",
-				"canonical": "#B9B4AA",
-				"oklch": "oklch(77.1% 0.015 84.6)",
+				"displayName": "Muted Ink Dark",
+				"canonical": "#CCCCE0",
 				"tonalRamp": [
-					"oklch(15.0% 0.002 84.6)",
-					"oklch(26.4% 0.006 84.6)",
-					"oklch(37.9% 0.011 84.6)",
-					"oklch(49.3% 0.015 84.6)",
-					"oklch(60.7% 0.015 84.6)",
-					"oklch(72.1% 0.011 84.6)",
-					"oklch(83.6% 0.006 84.6)",
-					"oklch(95.0% 0.002 84.6)"
+					"#3D3D43",
+					"#666670",
+					"#8F8F9D",
+					"#CCCCE0",
+					"#DBDBE9",
+					"#E6E6F0",
+					"#F0F0F6",
+					"#F9F9FB"
 				]
 			},
 			"block": {
 				"role": "neutral",
-				"displayName": "Black Block",
-				"canonical": "#111110",
-				"oklch": "oklch(17.7% 0.002 106.6)",
+				"displayName": "Navy Block",
+				"canonical": "#06004F",
 				"tonalRamp": [
-					"oklch(15.0% 0.000 106.6)",
-					"oklch(26.4% 0.001 106.6)",
-					"oklch(37.9% 0.001 106.6)",
-					"oklch(49.3% 0.002 106.6)",
-					"oklch(60.7% 0.002 106.6)",
-					"oklch(72.1% 0.001 106.6)",
-					"oklch(83.6% 0.001 106.6)",
-					"oklch(95.0% 0.000 106.6)"
+					"#020018",
+					"#030028",
+					"#040037",
+					"#06004F",
+					"#514D84",
+					"#8380A7",
+					"#B4B3CA",
+					"#E1E0EA"
 				]
 			},
 			"block-dark": {
 				"role": "neutral",
-				"displayName": "Charcoal Block",
-				"canonical": "#1A1917",
-				"oklch": "oklch(21.4% 0.004 84.6)",
+				"displayName": "Deep Navy Block",
+				"canonical": "#030030",
 				"tonalRamp": [
-					"oklch(15.0% 0.001 84.6)",
-					"oklch(26.4% 0.002 84.6)",
-					"oklch(37.9% 0.003 84.6)",
-					"oklch(49.3% 0.004 84.6)",
-					"oklch(60.7% 0.004 84.6)",
-					"oklch(72.1% 0.003 84.6)",
-					"oklch(83.6% 0.002 84.6)",
-					"oklch(95.0% 0.001 84.6)"
+					"#01000E",
+					"#020018",
+					"#020022",
+					"#030030",
+					"#4F4D6E",
+					"#818098",
+					"#B3B3C1",
+					"#E1E0E6"
 				]
 			},
 			"on-block": {
 				"role": "neutral",
-				"displayName": "Bone on Block",
-				"canonical": "#EDE8DE",
-				"oklch": "oklch(93.2% 0.014 84.6)",
+				"displayName": "Cream On Block",
+				"canonical": "#F5F0E8",
 				"tonalRamp": [
-					"oklch(15.0% 0.002 84.6)",
-					"oklch(26.4% 0.006 84.6)",
-					"oklch(37.9% 0.010 84.6)",
-					"oklch(49.3% 0.014 84.6)",
-					"oklch(60.7% 0.014 84.6)",
-					"oklch(72.1% 0.010 84.6)",
-					"oklch(83.6% 0.006 84.6)",
-					"oklch(95.0% 0.002 84.6)"
+					"#4A4846",
+					"#7B7874",
+					"#ACA8A2",
+					"#F5F0E8",
+					"#F8F5EF",
+					"#FAF8F4",
+					"#FCFBF8",
+					"#FEFDFC"
 				]
 			},
-			"poster-red": {
+			"red": {
 				"role": "primary",
-				"displayName": "Poster Red",
-				"canonical": "#E4232B",
-				"oklch": "oklch(59.0% 0.223 26.1)",
+				"displayName": "Accent (navy on light)",
+				"canonical": "#06004F",
 				"tonalRamp": [
-					"oklch(15.0% 0.033 26.1)",
-					"oklch(26.4% 0.092 26.1)",
-					"oklch(37.9% 0.155 26.1)",
-					"oklch(49.3% 0.219 26.1)",
-					"oklch(60.7% 0.219 26.1)",
-					"oklch(72.1% 0.155 26.1)",
-					"oklch(83.6% 0.092 26.1)",
-					"oklch(95.0% 0.033 26.1)"
+					"#020018",
+					"#030028",
+					"#040037",
+					"#06004F",
+					"#514D84",
+					"#8380A7",
+					"#B4B3CA",
+					"#E1E0EA"
+				]
+			},
+			"red-dark": {
+				"role": "primary",
+				"displayName": "Accent (lime on dark)",
+				"canonical": "#F2FF26",
+				"tonalRamp": [
+					"#494D0B",
+					"#798013",
+					"#A9B31B",
+					"#F2FF26",
+					"#F6FF67",
+					"#F9FF93",
+					"#FBFFBE",
+					"#FDFFE5"
 				]
 			},
 			"red-solid": {
 				"role": "primary",
-				"displayName": "Signal Red Solid",
-				"canonical": "#C8141F",
-				"oklch": "oklch(53.0% 0.207 26.3)",
+				"displayName": "Signal Lime",
+				"canonical": "#F2FF26",
 				"tonalRamp": [
-					"oklch(15.0% 0.031 26.3)",
-					"oklch(26.4% 0.085 26.3)",
-					"oklch(37.9% 0.144 26.3)",
-					"oklch(49.3% 0.203 26.3)",
-					"oklch(60.7% 0.203 26.3)",
-					"oklch(72.1% 0.144 26.3)",
-					"oklch(83.6% 0.085 26.3)",
-					"oklch(95.0% 0.031 26.3)"
+					"#494D0B",
+					"#798013",
+					"#A9B31B",
+					"#F2FF26",
+					"#F6FF67",
+					"#F9FF93",
+					"#FBFFBE",
+					"#FDFFE5"
 				]
 			},
 			"red-text": {
 				"role": "primary",
-				"displayName": "Red Text",
-				"canonical": "#B5121C",
-				"oklch": "oklch(49.3% 0.192 26.2)",
+				"displayName": "Link Blue",
+				"canonical": "#202D85",
 				"tonalRamp": [
-					"oklch(15.0% 0.029 26.2)",
-					"oklch(26.4% 0.079 26.2)",
-					"oklch(37.9% 0.134 26.2)",
-					"oklch(49.3% 0.188 26.2)",
-					"oklch(60.7% 0.188 26.2)",
-					"oklch(72.1% 0.134 26.2)",
-					"oklch(83.6% 0.079 26.2)",
-					"oklch(95.0% 0.029 26.2)"
+					"#0A0E28",
+					"#101743",
+					"#161F5D",
+					"#202D85",
+					"#636CAA",
+					"#9096C2",
+					"#BCC0DA",
+					"#E4E6F0"
 				]
 			},
 			"red-text-dark": {
 				"role": "primary",
-				"displayName": "Red Text on Dark",
-				"canonical": "#FF5A5F",
-				"oklch": "oklch(68.9% 0.200 22.4)",
+				"displayName": "Lime Link",
+				"canonical": "#F2FF26",
 				"tonalRamp": [
-					"oklch(15.0% 0.030 22.4)",
-					"oklch(26.4% 0.082 22.4)",
-					"oklch(37.9% 0.140 22.4)",
-					"oklch(49.3% 0.197 22.4)",
-					"oklch(60.7% 0.197 22.4)",
-					"oklch(72.1% 0.140 22.4)",
-					"oklch(83.6% 0.082 22.4)",
-					"oklch(95.0% 0.030 22.4)"
+					"#494D0B",
+					"#798013",
+					"#A9B31B",
+					"#F2FF26",
+					"#F6FF67",
+					"#F9FF93",
+					"#FBFFBE",
+					"#FDFFE5"
 				]
 			},
 			"on-red": {
-				"role": "neutral",
-				"displayName": "Off-White on Red",
-				"canonical": "#F6F1E8",
-				"oklch": "oklch(96.0% 0.013 82.4)",
+				"role": "primary",
+				"displayName": "Navy On Lime",
+				"canonical": "#06004F",
 				"tonalRamp": [
-					"oklch(15.0% 0.002 82.4)",
-					"oklch(26.4% 0.005 82.4)",
-					"oklch(37.9% 0.009 82.4)",
-					"oklch(49.3% 0.013 82.4)",
-					"oklch(60.7% 0.013 82.4)",
-					"oklch(72.1% 0.009 82.4)",
-					"oklch(83.6% 0.005 82.4)",
-					"oklch(95.0% 0.002 82.4)"
+					"#020018",
+					"#030028",
+					"#040037",
+					"#06004F",
+					"#514D84",
+					"#8380A7",
+					"#B4B3CA",
+					"#E1E0EA"
+				]
+			},
+			"mark": {
+				"role": "primary",
+				"displayName": "Highlighter Mark",
+				"canonical": "#F2FF26",
+				"tonalRamp": [
+					"#494D0B",
+					"#798013",
+					"#A9B31B",
+					"#F2FF26",
+					"#F6FF67",
+					"#F9FF93",
+					"#FBFFBE",
+					"#FDFFE5"
 				]
 			},
 			"rule": {
 				"role": "neutral",
-				"displayName": "Hairline Rule",
-				"canonical": "rgb(17 17 16 / 0.25)"
+				"displayName": "Navy Rule",
+				"canonical": "rgb(6 0 79 / 0.25)"
 			},
 			"rule-dark": {
 				"role": "neutral",
-				"displayName": "Hairline Rule on Dark",
-				"canonical": "rgb(237 232 222 / 0.22)"
+				"displayName": "Cream Rule",
+				"canonical": "rgb(245 240 232 / 0.22)"
 			}
 		},
 		"typographyMeta": {
@@ -307,7 +321,7 @@
 			{
 				"name": "hero-field-reveal",
 				"value": "900ms cubic-bezier(0.16, 1, 0.3, 1) 150ms",
-				"purpose": "The one authored moment: the hero red field rises by clip-path. Off under prefers-reduced-motion."
+				"purpose": "The one authored moment: the hero lime field rises by clip-path. Off under prefers-reduced-motion."
 			}
 		],
 		"breakpoints": [
@@ -340,7 +354,7 @@
 			"refersTo": "button-primary",
 			"description": "The main action, such as View projects and View details.",
 			"html": "<a class=\"ds-btn-primary\" href=\"#\">View projects <svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></a>",
-			"css": ".ds-btn-primary{display:inline-flex;align-items:center;gap:0.75rem;min-height:2.75rem;padding:0.625rem 1.25rem;border:1px solid transparent;border-radius:0;font-family:var(--font-sans, 'Archivo Variable', sans-serif);font-size:0.875rem;font-weight:700;line-height:1.25;letter-spacing:0.02em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:background-color 150ms ease-out,color 150ms ease-out,border-color 150ms ease-out;background:var(--color-red-solid,#C8141F);border-color:var(--color-red-solid,#C8141F);color:var(--color-on-red,#F6F1E8)}.ds-btn-primary svg{transition:translate 150ms ease-out}.ds-btn-primary:hover{background:var(--color-ink,#111110);border-color:var(--color-ink,#111110);color:var(--color-paper,#F1EDE4);}.ds-btn-primary:hover svg{translate:0.25rem 0}.ds-btn-primary:focus-visible{outline:2px solid currentColor;outline-offset:3px;}"
+			"css": ".ds-btn-primary{display:inline-flex;align-items:center;gap:0.75rem;min-height:2.75rem;padding:0.625rem 1.25rem;border:1px solid transparent;border-radius:0;font-family:var(--font-sans, 'Archivo Variable', sans-serif);font-size:0.875rem;font-weight:700;line-height:1.25;letter-spacing:0.02em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:background-color 150ms ease-out,color 150ms ease-out,border-color 150ms ease-out;background:var(--color-red-solid,#F2FF26);border-color:var(--color-red,#06004F);color:var(--color-on-red,#06004F)}.ds-btn-primary svg{transition:translate 150ms ease-out}.ds-btn-primary:hover{background:var(--color-ink,#06004F);border-color:var(--color-ink,#06004F);color:var(--color-paper,#F5F0E8);}.ds-btn-primary:hover svg{translate:0.25rem 0}.ds-btn-primary:focus-visible{outline:2px solid currentColor;outline-offset:3px;}"
 		},
 		{
 			"name": "Secondary Button",
@@ -348,7 +362,7 @@
 			"refersTo": "button-secondary",
 			"description": "The second action, such as Download CV and Visit site.",
 			"html": "<a class=\"ds-btn-secondary\" href=\"#\">Download CV <svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></a>",
-			"css": ".ds-btn-secondary{display:inline-flex;align-items:center;gap:0.75rem;min-height:2.75rem;padding:0.625rem 1.25rem;border:1px solid transparent;border-radius:0;font-family:var(--font-sans, 'Archivo Variable', sans-serif);font-size:0.875rem;font-weight:700;line-height:1.25;letter-spacing:0.02em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:background-color 150ms ease-out,color 150ms ease-out,border-color 150ms ease-out;background:transparent;border-color:currentColor;color:var(--color-ink,#111110)}.ds-btn-secondary:hover{background:var(--color-ink,#111110);border-color:var(--color-ink,#111110);color:var(--color-paper,#F1EDE4);}.ds-btn-secondary:focus-visible{outline:2px solid currentColor;outline-offset:3px;}"
+			"css": ".ds-btn-secondary{display:inline-flex;align-items:center;gap:0.75rem;min-height:2.75rem;padding:0.625rem 1.25rem;border:1px solid transparent;border-radius:0;font-family:var(--font-sans, 'Archivo Variable', sans-serif);font-size:0.875rem;font-weight:700;line-height:1.25;letter-spacing:0.02em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:background-color 150ms ease-out,color 150ms ease-out,border-color 150ms ease-out;background:transparent;border-color:currentColor;color:var(--color-ink,#06004F)}.ds-btn-secondary:hover{background:var(--color-ink,#06004F);border-color:var(--color-ink,#06004F);color:var(--color-paper,#F5F0E8);}.ds-btn-secondary:focus-visible{outline:2px solid currentColor;outline-offset:3px;}"
 		},
 		{
 			"name": "Icon Button",
@@ -356,7 +370,7 @@
 			"refersTo": "button-icon",
 			"description": "Square header control for the theme toggle and the menu.",
 			"html": "<button class=\"ds-btn-icon\" type=\"button\" aria-label=\"Switch to dark theme\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z\"/></svg></button>",
-			"css": ".ds-btn-icon{display:inline-flex;align-items:center;justify-content:center;width:2.75rem;height:2.75rem;padding:0;border:1px solid transparent;border-radius:0;background:transparent;color:var(--color-ink,#111110);cursor:pointer;transition:border-color 150ms ease-out}.ds-btn-icon:hover{border-color:currentColor}.ds-btn-icon:focus-visible{outline:2px solid currentColor;outline-offset:3px;}"
+			"css": ".ds-btn-icon{display:inline-flex;align-items:center;justify-content:center;width:2.75rem;height:2.75rem;padding:0;border:1px solid transparent;border-radius:0;background:transparent;color:var(--color-ink,#06004F);cursor:pointer;transition:border-color 150ms ease-out}.ds-btn-icon:hover{border-color:currentColor}.ds-btn-icon:focus-visible{outline:2px solid currentColor;outline-offset:3px;}"
 		},
 		{
 			"name": "Top Navigation",
@@ -364,7 +378,7 @@
 			"refersTo": "navigation",
 			"description": "Fixed header with the DC mark and the section links.",
 			"html": "<header class=\"ds-nav\"><a class=\"ds-nav-mark\" href=\"#\">DC</a><nav aria-label=\"Primary\"><ul class=\"ds-nav-links\"><li><a href=\"#\">Summary</a></li><li><a href=\"#\">Skills</a></li><li><a href=\"#\">Projects</a></li><li><a href=\"#\">Experience</a></li><li><a href=\"#\">Contact</a></li></ul></nav></header>",
-			"css": ".ds-nav{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;height:4rem;padding-inline:1.5rem;border-bottom:1px solid var(--color-rule, rgb(17 17 16 / 0.25));background:var(--color-paper,#F1EDE4);color:var(--color-ink,#111110);font-family:var(--font-sans, 'Archivo Variable', sans-serif)}.ds-nav-mark{font-size:1.75rem;font-weight:800;font-stretch:75%;text-transform:uppercase;color:inherit;text-decoration:none}.ds-nav-links{display:flex;gap:2rem;list-style:none;margin:0;padding:0}.ds-nav-links a{display:inline-flex;align-items:center;min-height:2.75rem;font-size:0.875rem;font-weight:700;letter-spacing:0.02em;text-transform:uppercase;color:inherit;text-decoration:none;text-underline-offset:4px}.ds-nav-links a:hover{text-decoration:underline}.ds-nav a:focus-visible{outline:2px solid currentColor;outline-offset:3px;}"
+			"css": ".ds-nav{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;height:4rem;padding-inline:1.5rem;border-bottom:1px solid var(--color-rule, rgb(17 17 16 / 0.25));background:var(--color-paper,#F5F0E8);color:var(--color-ink,#06004F);font-family:var(--font-sans, 'Archivo Variable', sans-serif)}.ds-nav-mark{font-size:1.75rem;font-weight:800;font-stretch:75%;text-transform:uppercase;color:inherit;text-decoration:none}.ds-nav-links{display:flex;gap:2rem;list-style:none;margin:0;padding:0}.ds-nav-links a{display:inline-flex;align-items:center;min-height:2.75rem;font-size:0.875rem;font-weight:700;letter-spacing:0.02em;text-transform:uppercase;color:inherit;text-decoration:none;text-underline-offset:4px}.ds-nav-links a:hover{text-decoration:underline}.ds-nav a:focus-visible{outline:2px solid currentColor;outline-offset:3px;}"
 		},
 		{
 			"name": "Project Cell",
@@ -372,32 +386,32 @@
 			"refersTo": "project-cell",
 			"description": "One project in the ruled project grid: screenshot, title, summary and action.",
 			"html": "<article class=\"ds-cell\"><div class=\"ds-cell-img\"></div><div class=\"ds-cell-body\"><h3>EngagementFit</h3><p>Corporate wellness platform rescue and rebuild.</p><a class=\"ds-btn-primary\" href=\"#\">View details <svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></a></div></article>",
-			"css": ".ds-cell{display:flex;flex-direction:column;max-width:24rem;background:var(--color-paper,#F1EDE4);color:var(--color-ink,#111110);border:1px solid var(--color-rule, rgb(17 17 16 / 0.25));font-family:var(--font-sans, 'Archivo Variable', sans-serif)}.ds-cell-img{aspect-ratio:3/2;background:var(--color-surface,#E6E0D3)}.ds-cell-body{display:flex;flex-direction:column;align-items:flex-start;gap:1rem;padding:1.25rem;border-top:1px solid var(--color-rule, rgb(17 17 16 / 0.25))}.ds-cell-body h3{margin:0;font-size:1.75rem;font-weight:800;font-stretch:75%;line-height:1;text-transform:uppercase}.ds-cell-body p{margin:0;color:var(--color-ink-muted,#4A4640);line-height:1.6}.ds-btn-primary{display:inline-flex;align-items:center;gap:0.75rem;min-height:2.75rem;padding:0.625rem 1.25rem;border:1px solid transparent;border-radius:0;font-family:var(--font-sans, 'Archivo Variable', sans-serif);font-size:0.875rem;font-weight:700;line-height:1.25;letter-spacing:0.02em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:background-color 150ms ease-out,color 150ms ease-out,border-color 150ms ease-out;background:var(--color-red-solid,#C8141F);color:var(--color-on-red,#F6F1E8)}.ds-btn-primary:hover{background:var(--color-ink,#111110);border-color:var(--color-ink,#111110);color:var(--color-paper,#F1EDE4);}.ds-btn-primary:focus-visible{outline:2px solid currentColor;outline-offset:3px;}"
+			"css": ".ds-cell{display:flex;flex-direction:column;max-width:24rem;background:var(--color-paper,#F5F0E8);color:var(--color-ink,#06004F);border:1px solid var(--color-rule, rgb(17 17 16 / 0.25));font-family:var(--font-sans, 'Archivo Variable', sans-serif)}.ds-cell-img{aspect-ratio:3/2;background:var(--color-surface,#EAE4D8)}.ds-cell-body{display:flex;flex-direction:column;align-items:flex-start;gap:1rem;padding:1.25rem;border-top:1px solid var(--color-rule, rgb(17 17 16 / 0.25))}.ds-cell-body h3{margin:0;font-size:1.75rem;font-weight:800;font-stretch:75%;line-height:1;text-transform:uppercase}.ds-cell-body p{margin:0;color:var(--color-ink-muted,#3A3578);line-height:1.6}.ds-btn-primary{display:inline-flex;align-items:center;gap:0.75rem;min-height:2.75rem;padding:0.625rem 1.25rem;border:1px solid transparent;border-radius:0;font-family:var(--font-sans, 'Archivo Variable', sans-serif);font-size:0.875rem;font-weight:700;line-height:1.25;letter-spacing:0.02em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:background-color 150ms ease-out,color 150ms ease-out,border-color 150ms ease-out;background:var(--color-red-solid,#F2FF26);color:var(--color-on-red,#06004F)}.ds-btn-primary:hover{background:var(--color-ink,#06004F);border-color:var(--color-ink,#06004F);color:var(--color-paper,#F5F0E8);}.ds-btn-primary:focus-visible{outline:2px solid currentColor;outline-offset:3px;}"
 		},
 		{
 			"name": "Stat Band",
 			"kind": "custom",
 			"refersTo": "stats",
-			"description": "Red band with three ruled stat columns.",
+			"description": "lime band with three ruled stat columns.",
 			"html": "<dl class=\"ds-stats\"><div><dt>Years of experience</dt><dd>10+</dd></div><div><dt>Products synced for Exclusive Books</dt><dd>6M+</dd></div><div><dt>Stores covered by that automation</dt><dd>40+</dd></div></dl>",
-			"css": ".ds-stats{display:grid;grid-template-columns:repeat(3,1fr);margin:0;background:var(--color-red-solid,#C8141F);color:var(--color-on-red,#F6F1E8);font-family:var(--font-sans, 'Archivo Variable', sans-serif)}.ds-stats div{display:flex;flex-direction:column-reverse;justify-content:flex-end;gap:1rem;padding:2.5rem 1.5rem;border-left:1px solid rgb(246 241 232 / 0.4)}.ds-stats div:first-child{border-left:0}.ds-stats dd{margin:0;font-size:4rem;font-weight:900;font-stretch:62%;line-height:0.85;letter-spacing:-0.03em;font-variant-numeric:tabular-nums}.ds-stats dt{font-size:0.875rem;font-weight:700;letter-spacing:0.02em;text-transform:uppercase}"
+			"css": ".ds-stats{display:grid;grid-template-columns:repeat(3,1fr);margin:0;background:var(--color-red-solid,#F2FF26);color:var(--color-on-red,#06004F);font-family:var(--font-sans, 'Archivo Variable', sans-serif)}.ds-stats div{display:flex;flex-direction:column-reverse;justify-content:flex-end;gap:1rem;padding:2.5rem 1.5rem;border-left:1px solid rgb(246 241 232 / 0.4)}.ds-stats div:first-child{border-left:0}.ds-stats dd{margin:0;font-size:4rem;font-weight:900;font-stretch:62%;line-height:0.85;letter-spacing:-0.03em;font-variant-numeric:tabular-nums}.ds-stats dt{font-size:0.875rem;font-weight:700;letter-spacing:0.02em;text-transform:uppercase}"
 		},
 		{
 			"name": "Contact Row",
 			"kind": "custom",
 			"refersTo": "contact-row",
-			"description": "Ruled link row on the red Contact band.",
+			"description": "Ruled link row on the lime Contact band.",
 			"html": "<a class=\"ds-contact-row\" href=\"#\"><span>LinkedIn</span><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></a>",
-			"css": ".ds-contact-row{display:flex;align-items:center;gap:1rem;min-height:3.5rem;padding:0.75rem 0.25rem;border-bottom:1px solid rgb(246 241 232 / 0.4);background:var(--color-red-solid,#C8141F);color:var(--color-on-red,#F6F1E8);font-family:var(--font-sans, 'Archivo Variable', sans-serif);font-size:0.875rem;font-weight:700;letter-spacing:0.02em;text-transform:uppercase;text-decoration:none;transition:background-color 150ms ease-out,color 150ms ease-out}.ds-contact-row svg{margin-left:auto}.ds-contact-row:hover{background:var(--color-on-red,#F6F1E8);color:var(--color-red-solid,#C8141F)}.ds-contact-row:focus-visible{outline:2px solid currentColor;outline-offset:3px;}"
+			"css": ".ds-contact-row{display:flex;align-items:center;gap:1rem;min-height:3.5rem;padding:0.75rem 0.25rem;border-bottom:1px solid rgb(246 241 232 / 0.4);background:var(--color-red-solid,#F2FF26);color:var(--color-on-red,#06004F);font-family:var(--font-sans, 'Archivo Variable', sans-serif);font-size:0.875rem;font-weight:700;letter-spacing:0.02em;text-transform:uppercase;text-decoration:none;transition:background-color 150ms ease-out,color 150ms ease-out}.ds-contact-row svg{margin-left:auto}.ds-contact-row:hover{background:var(--color-on-red,#06004F);color:var(--color-red-solid,#F2FF26)}.ds-contact-row:focus-visible{outline:2px solid currentColor;outline-offset:3px;}"
 		}
 	],
 	"narrative": {
 		"northStar": "The Rescue Poster",
-		"overview": "The page reads as a modern Swiss poster for a developer who rescues failed builds. A strict grid, huge condensed grotesque type and flat fields of off white, black and signal red carry it. Every section is a full-width field, and visible hairline rules mark the columns and rows inside it.\n\nThe system is flat and typographic. Hierarchy comes from scale and weight, never from shadow, gradient or glass. One black-and-white portrait cutout stands in front of a solid red rectangle and is the only picture outside the project screenshots. The page refuses the dark sidebar CV with pill buttons that it replaced.\n\nThere are two themes, light and dark, with the same structure. Neither theme uses pure white: the light page is a warm off white, and the dark page is a near black with warm off-white text.",
+		"overview": "The page reads as a modern Swiss poster for a developer who rescues failed builds. A strict grid, huge condensed grotesque type and flat fields of poster cream, ink navy and signal lime carry it. Every section is a full-width field, and visible hairline rules mark the columns and rows inside it.\n\nThe system is flat and typographic. Hierarchy comes from scale and weight, never from shadow, gradient or glass. One black-and-white portrait cutout stands in front of a solid lime rectangle and is the only picture outside the project screenshots. The page refuses the dark sidebar CV with pill buttons that it replaced.\n\nThere are two themes, light and dark, with the same structure. Neither theme uses pure white: the light page is a warm cream with navy ink, and the dark page is ink navy with cream text.\n\n- Flush-left 12-column grid with visible 1px rules.\n- Condensed uppercase display type at poster scale.\n- Full-width fields that alternate paper, navy block and lime.\n- Square corners everywhere; no shadows, gradients or glass.\n- Light and dark themes, with no pure white in either.",
 		"keyCharacteristics": [
 			"Flush-left 12-column grid with visible 1px rules.",
 			"Condensed uppercase display type at poster scale.",
-			"Full-width fields that alternate paper, black block and red.",
+			"Full-width fields that alternate paper, navy block and lime.",
 			"Square corners everywhere; no shadows, gradients or glass.",
 			"Light and dark themes, with no pure white in either."
 		],
@@ -408,8 +422,13 @@
 				"section": "colors"
 			},
 			{
-				"name": "The Red Size Rule",
-				"body": "Poster Red is for fields and for text of 24px or larger. Text under 24px on red uses the Red Solid field; small red text on paper uses Red Text.",
+				"name": "The Lime Carries Navy Rule",
+				"body": "A lime field always carries Ink Navy text. Never put lime text on the light page: lime on cream measures 1.03:1. Lime text appears only on the dark page, through the `red` and `red-text` tokens.",
+				"section": "colors"
+			},
+			{
+				"name": "The Lime Edge Rule",
+				"body": "A lime fill on the light page needs a navy edge, because lime and cream are close in tone. The primary button carries a 1px border in the `red` token.",
 				"section": "colors"
 			},
 			{
@@ -434,19 +453,21 @@
 			}
 		],
 		"dos": [
-			"**Do** use the colour tokens from `src/app.css` by name in both themes.",
-			"**Do** keep every corner square (0px) and every rule 1px.",
-			"**Do** keep text under 24px off Poster Red; use Red Solid for small text on red.",
-			"**Do** keep targets at least 44px high and the focus outline visible on every field.",
-			"**Do** keep the one authored motion, the hero red field rising (900ms), and keep state changes at 150ms; honour prefers-reduced-motion.",
-			"**Do** theme the browser surfaces: selection, focus ring, scrollbar and `color-scheme`."
+			"Do use the colour tokens from `src/app.css` by name in both themes.",
+			"Do keep every corner square (0px) and every rule 1px.",
+			"Do put Ink Navy text on every lime field.",
+			"Do give a lime fill on the light page a navy edge.",
+			"Do keep targets at least 44px high and the focus outline visible on every field.",
+			"Do keep the one authored motion, the hero lime field rising (900ms), and keep state changes at 150ms; honour prefers-reduced-motion.",
+			"Do theme the browser surfaces: selection, focus ring, scrollbar and `color-scheme`."
 		],
 		"donts": [
-			"**Don't** use #FFFFFF or a `white` utility anywhere.",
-			"**Don't** add shadows, gradients, glass or rounded corners.",
-			"**Don't** add eyebrow labels, decorative numbers, distress textures, barcodes or filler symbols.",
-			"**Don't** use the sunburst or rising sun motifs of the colour reference image.",
-			"**Don't** write the email address or Telegram handle in markup."
+			"Don't use #FFFFFF or a `white` utility anywhere.",
+			"Don't put lime text on the light page.",
+			"Don't add shadows, gradients, glass or rounded corners.",
+			"Don't add eyebrow labels, decorative numbers, distress textures, barcodes or filler symbols.",
+			"Don't use the sunburst or rising sun motifs of the colour reference image.",
+			"Don't write the email address or Telegram handle in markup."
 		]
 	}
 }

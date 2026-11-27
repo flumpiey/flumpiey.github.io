@@ -6,7 +6,7 @@
 	];
 </script>
 
-<!-- red-solid, not red: the labels are small text (on-red on red-solid is 5.22:1). -->
+<!-- red-solid, not red: the band stays lime in both themes (on-red on red-solid is 17.05:1). -->
 <section aria-label="Key numbers" class="bg-red-solid text-on-red selection:bg-block selection:text-on-block">
 	<dl class="page-container grid divide-y divide-on-red/40 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
 		{#each stats as stat (stat.value)}
