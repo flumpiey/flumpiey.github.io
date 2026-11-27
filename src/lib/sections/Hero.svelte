@@ -82,7 +82,7 @@
 		}
 	}
 
-	/* The one authored motion: the red field rises from the bottom edge. Static by default. */
+	/* The one authored motion: the lime field rises from the bottom edge. Static by default. */
 	@media (prefers-reduced-motion: no-preference) {
 		.hero-field {
 			animation: hero-field-reveal 900ms cubic-bezier(0.16, 1, 0.3, 1) 150ms both;
